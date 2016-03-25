@@ -10,13 +10,13 @@
 
 html {
   /* 1 */
-  font: 300 14px / 20px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   /* 3 */
-  background: #E5914E;
-  color: #5C4E46;
+  background: #fff;
+  color: #444;
 }
 
 /*
@@ -264,9 +264,9 @@ h4,
 h5,
 h6 {
   margin: 0 0 15px 0;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  color: #232323;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #444;
   text-transform: none;
 }
 
@@ -1709,16 +1709,16 @@ iframe {
  */
 
 .uk-panel-box-primary {
-  background-color: rgba(229, 145, 78, 0.3);
-  color: #5C4E46;
+  background-color: #ebf7fd;
+  color: #2d7091;
 }
 
 .uk-panel-box-primary-hover:hover {
-  color: #5C4E46;
+  color: #2d7091;
 }
 
 .uk-panel-box-primary .uk-panel-title {
-  color: #5C4E46;
+  color: #2d7091;
 }
 
 /*
@@ -1726,16 +1726,16 @@ iframe {
  */
 
 .uk-panel-box-secondary {
-  background-color: rgba(229, 145, 78, 0.1);
-  color: #5C4E46;
+  background-color: #eee;
+  color: #444;
 }
 
 .uk-panel-box-secondary-hover:hover {
-  color: #5C4E46;
+  color: #444;
 }
 
 .uk-panel-box-secondary .uk-panel-title {
-  color: #5C4E46;
+  color: #444;
 }
 
 /* Modifier: `uk-panel-hover`
@@ -2198,7 +2198,7 @@ iframe {
 .uk-nav-header {
   padding: 5px 15px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 12px;
 }
 
@@ -2268,7 +2268,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-nav-side > li.uk-active > a {
-  background: rgba(0, 0, 0, 0.25);
+  background: #00a8e6;
   color: #fff;
 }
 
@@ -2319,7 +2319,7 @@ ul.uk-nav-sub {
 
 .uk-nav-dropdown > li > a:hover,
 .uk-nav-dropdown > li > a:focus {
-  background: #E5914E;
+  background: #00a8e6;
   color: #fff;
   /* 2 */
   outline: none;
@@ -2361,7 +2361,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-navbar > li > a {
-  color: #fff;
+  color: #444;
 }
 
 /*
@@ -2372,7 +2372,7 @@ ul.uk-nav-sub {
 
 .uk-nav-navbar > li > a:hover,
 .uk-nav-navbar > li > a:focus {
-  background: rgba(255, 255, 255, 0.1);
+  background: #00a8e6;
   color: #fff;
   /* 2 */
   outline: none;
@@ -2478,7 +2478,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 
 .uk-navbar {
-  background: #2d1807;
+  background: #eee;
   color: #444;
 }
 
@@ -2526,13 +2526,13 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   box-sizing: border-box;
   text-decoration: none;
   /* 1 */
-  height: 60px;
+  height: 40px;
   padding: 0 15px;
-  line-height: 60px;
+  line-height: 40px;
   /* 2 */
-  color: #fff;
+  color: #444;
   font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -2552,8 +2552,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li.uk-open > a {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: #f5f5f5;
+  color: #444;
   /* 3 */
   outline: none;
 }
@@ -2561,8 +2561,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* OnClick */
 
 .uk-navbar-nav > li > a:active {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: #ddd;
+  color: #444;
 }
 
 /* Active */
@@ -2576,11 +2576,11 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 
 .uk-navbar-nav .uk-navbar-nav-subtitle {
-  line-height: 48px;
+  line-height: 28px;
 }
 
 .uk-navbar-nav-subtitle > div {
-  margin-top: -16px;
+  margin-top: -6px;
   font-size: 10px;
   line-height: 12px;
 }
@@ -2597,7 +2597,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-toggle {
   box-sizing: border-box;
   display: block;
-  height: 60px;
+  height: 40px;
   padding: 0 15px;
   float: left;
 }
@@ -2642,8 +2642,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 
 .uk-navbar-brand {
-  font-size: 22px;
-  color: #fff;
+  font-size: 18px;
+  color: #444;
   text-decoration: none;
 }
 
@@ -2654,7 +2654,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 
 .uk-navbar-brand:hover,
 .uk-navbar-brand:focus {
-  color: rgba(255, 255, 255, 0.5);
+  color: #444;
   text-decoration: none;
   /* 2 */
   outline: none;
@@ -2993,8 +2993,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 
 .uk-pagination > li > a {
-  background: rgba(229, 145, 78, 0.3);
-  color: #5C4E46;
+  background: #eee;
+  color: #444;
 }
 
 /*
@@ -3005,8 +3005,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 
 .uk-pagination > li > a:hover,
 .uk-pagination > li > a:focus {
-  background-color: #E5914E;
-  color: #fff;
+  background-color: #f5f5f5;
+  color: #444;
   /* 2 */
   outline: none;
 }
@@ -3014,8 +3014,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* OnClick */
 
 .uk-pagination > li > a:active {
-  background-color: rgba(229, 145, 78, 0.1);
-  color: #5C4E46;
+  background-color: #ddd;
+  color: #444;
 }
 
 /*
@@ -3023,7 +3023,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 
 .uk-pagination > .uk-active > span {
-  background: #E5914E;
+  background: #00a8e6;
   color: #fff;
 }
 
@@ -3032,8 +3032,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 
 .uk-pagination > .uk-disabled > span {
-  background-color: rgba(229, 145, 78, 0.1);
-  color: #5C4E46;
+  background-color: #f5f5f5;
+  color: #999;
 }
 
 /* Previous and next navigation
@@ -3066,7 +3066,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 3px solid rgba(229, 145, 78, 0.3);
+  border-bottom: 1px solid #ddd;
 }
 
 /*
@@ -3089,7 +3089,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 
 .uk-tab > li {
-  margin-bottom: -3px;
+  margin-bottom: -1px;
   float: left;
   /* 1 */
   position: relative;
@@ -3098,9 +3098,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-tab > li > a {
   display: block;
   padding: 8px 12px 8px 12px;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   border-bottom-width: 0;
-  color: #5C4E46;
+  color: #07D;
   text-decoration: none;
 }
 
@@ -3118,9 +3118,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-tab > li > a:hover,
 .uk-tab > li > a:focus,
 .uk-tab > li.uk-open > a {
-  border-color: rgba(229, 145, 78, 0.3);
-  background: rgba(229, 145, 78, 0.3);
-  color: #5C4E46;
+  border-color: #f5f5f5;
+  background: #f5f5f5;
+  color: #059;
   /* 2 */
   outline: none;
 }
@@ -3128,17 +3128,17 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-tab > li:not(.uk-active) > a:hover,
 .uk-tab > li:not(.uk-active) > a:focus,
 .uk-tab > li.uk-open:not(.uk-active) > a {
-  margin-bottom: 3px;
-  padding-bottom: 5px;
+  margin-bottom: 1px;
+  padding-bottom: 7px;
 }
 
 /* Active */
 
 .uk-tab > li.uk-active > a {
-  border-color: rgba(229, 145, 78, 0.3);
+  border-color: #ddd;
   border-bottom-color: transparent;
-  background: rgba(229, 145, 78, 0.3);
-  color: #5C4E46;
+  background: #fff;
+  color: #444;
 }
 
 /* Disabled */
@@ -3188,12 +3188,12 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 
 .uk-tab-center {
-  border-bottom: 3px solid rgba(229, 145, 78, 0.3);
+  border-bottom: 1px solid #ddd;
 }
 
 .uk-tab-center-bottom {
   border-bottom: none;
-  border-top: 3px solid rgba(229, 145, 78, 0.3);
+  border-top: 1px solid #ddd;
 }
 
 .uk-tab-center:before,
@@ -3230,19 +3230,19 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 
 .uk-tab-bottom {
-  border-top: 3px solid rgba(229, 145, 78, 0.3);
+  border-top: 1px solid #ddd;
   border-bottom: none;
 }
 
 .uk-tab-bottom > li {
-  margin-top: -3px;
+  margin-top: -1px;
   margin-bottom: 0;
 }
 
 .uk-tab-bottom > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
-  border-bottom-width: 3px;
+  border-bottom-width: 1px;
   border-top-width: 0;
 }
 
@@ -3250,14 +3250,14 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-tab-bottom > li:not(.uk-active) > a:focus,
 .uk-tab-bottom > li.uk-open:not(.uk-active) > a {
   margin-bottom: 0;
-  margin-top: 3px;
+  margin-top: 1px;
   padding-bottom: 8px;
-  padding-top: 5px;
+  padding-top: 7px;
 }
 
 .uk-tab-bottom > li.uk-active > a {
   border-top-color: transparent;
-  border-bottom-color: rgba(229, 145, 78, 0.3);
+  border-bottom-color: #ddd;
 }
 
 /* Modifier: 'tab-grid'
@@ -3280,8 +3280,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   position: absolute;
   left: 5px;
   right: 0;
-  bottom: -3px;
-  border-top: 3px solid rgba(229, 145, 78, 0.3);
+  bottom: -1px;
+  border-top: 1px solid #ddd;
   /* 1 */
   z-index: -1;
 }
@@ -3303,7 +3303,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 
 .uk-tab-grid.uk-tab-bottom:before {
-  top: -3px;
+  top: -1px;
   bottom: auto;
 }
 
@@ -3338,7 +3338,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 
   .uk-tab-left > li.uk-active > a,
   .uk-tab-right > li.uk-active > a {
-    border-color: rgba(229, 145, 78, 0.3);
+    border-color: #ddd;
   }
 
   /*
@@ -3346,24 +3346,24 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
      */
 
   .uk-tab-left {
-    border-right: 3px solid rgba(229, 145, 78, 0.3);
+    border-right: 1px solid #ddd;
   }
 
   .uk-tab-left > li {
-    margin-right: -3px;
+    margin-right: -1px;
   }
 
   .uk-tab-left > li > a {
-    border-bottom-width: 3px;
+    border-bottom-width: 1px;
     border-right-width: 0;
   }
 
   .uk-tab-left > li:not(.uk-active) > a:hover,
   .uk-tab-left > li:not(.uk-active) > a:focus {
     margin-bottom: 0;
-    margin-right: 3px;
+    margin-right: 1px;
     padding-bottom: 8px;
-    padding-right: 9px;
+    padding-right: 11px;
   }
 
   .uk-tab-left > li.uk-active > a {
@@ -3375,24 +3375,24 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
      */
 
   .uk-tab-right {
-    border-left: 3px solid rgba(229, 145, 78, 0.3);
+    border-left: 1px solid #ddd;
   }
 
   .uk-tab-right > li {
-    margin-left: -3px;
+    margin-left: -1px;
   }
 
   .uk-tab-right > li > a {
-    border-bottom-width: 3px;
+    border-bottom-width: 1px;
     border-left-width: 0;
   }
 
   .uk-tab-right > li:not(.uk-active) > a:hover,
   .uk-tab-right > li:not(.uk-active) > a:focus {
     margin-bottom: 0;
-    margin-left: 3px;
+    margin-left: 1px;
     padding-bottom: 8px;
-    padding-left: 9px;
+    padding-left: 11px;
   }
 
   .uk-tab-right > li.uk-active > a {
@@ -3908,8 +3908,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   padding: 4px 6px;
   /* 4 */
   border: 1px solid #ddd;
-  background: rgba(255, 255, 255, 0.9);
-  color: #5C4E46;
+  background: #fff;
+  color: #444;
   transition: all linear 0.2s;
 }
 
@@ -3930,9 +3930,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="search"]:focus,
 .uk-form input[type="tel"]:focus,
 .uk-form input[type="color"]:focus {
-  border-color: rgba(229, 145, 78, 0.8);
+  border-color: #99baca;
   outline: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: #f5fbfe;
   color: #444;
 }
 
@@ -4195,7 +4195,7 @@ select.uk-form-width-mini {
 .uk-form-stacked .uk-form-label {
   display: block;
   margin-bottom: 5px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Modifier: `uk-form-horizontal`
@@ -4210,7 +4210,7 @@ select.uk-form-width-mini {
   .uk-form-horizontal .uk-form-label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: bold;
   }
 }
 
@@ -4322,14 +4322,14 @@ select.uk-form-width-mini {
   overflow: visible;
   /* 5 */
   font: inherit;
-  color: #5C4E46;
+  color: #444;
   /* 6 */
   text-transform: none;
   /* 7 */
   display: inline-block;
   box-sizing: border-box;
   padding: 0 12px;
-  background: rgba(229, 145, 78, 0.3);
+  background: #eee;
   vertical-align: middle;
   /* 8 */
   line-height: 30px;
@@ -4355,8 +4355,8 @@ select.uk-form-width-mini {
 
 .uk-button:hover,
 .uk-button:focus {
-  background-color: rgba(229, 145, 78, 0.5);
-  color: #5C4E46;
+  background-color: #f5f5f5;
+  color: #444;
   /* 2 */
   outline: none;
   /* 3 */
@@ -4379,7 +4379,7 @@ select.uk-form-width-mini {
  */
 
 .uk-button-primary {
-  background-color: #E5914E;
+  background-color: #00a8e6;
   color: #fff;
 }
 
@@ -4387,15 +4387,15 @@ select.uk-form-width-mini {
 
 .uk-button-primary:hover,
 .uk-button-primary:focus {
-  background-color: #E5914E;
-  color: fff;
+  background-color: #35b3ee;
+  color: #fff;
 }
 
 /* Active */
 
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
-  background-color: #E5914E;
+  background-color: #0091ca;
   color: #fff;
 }
 
@@ -9119,13 +9119,13 @@ a.uk-thumbnail:focus {
 
 .uk-dropdown-navbar {
   margin-top: 0;
-  background: #2d1807;
-  color: #fff;
+  background: #f5f5f5;
+  color: #444;
 }
 
 .uk-open > .uk-dropdown-navbar {
-  -webkit-animation: none 0.2s ease-in-out;
-  animation: none 0.2s ease-in-out;
+  -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
+  animation: uk-slide-top-fixed 0.2s ease-in-out;
 }
 
 /* Modifier `uk-dropdown-scrollable`
@@ -10963,664 +10963,8 @@ a.uk-thumbnail:focus {
   }
 }
 
-/***** Additional Uikit Components *****/
-
-/* ========================================================================
-   Component: Sticky
- ========================================================================== */
-
-/*
- * 1. More robust if padding and border are used
- */
-
-[data-uk-sticky].uk-active {
-  z-index: 980;
-  /* 1 */
-  box-sizing: border-box;
-}
-
-/*
- * 1. Resolve frame-rate issues on devices with lower frame-rates. Forces hardware acceleration
- */
-
-.uk-sticky-placeholder > * {
-  /* 1 */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-/*
- * Faster animations
- */
-
-[data-uk-sticky][class*='uk-animation-'] {
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-}
-
-[data-uk-sticky].uk-animation-reverse {
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-}
-
-/* ========================================================================
-   Component: Form select
- ========================================================================== */
-
-/*
- * 1. Behave like form elements
- * 2. Create position context for dropdowns
- * 3. Clip content
- */
-
-.uk-form-select {
-  /* 1 */
-  display: inline-block;
-  vertical-align: middle;
-  /* 2 */
-  position: relative;
-  /* 3 */
-  overflow: hidden;
-}
-
-/*
- * 1. Required for Firefox
- * 1. Required for Webkit to make `height` work
- */
-
-.uk-form-select select {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  /* 1 */
-  left: 0;
-  /* 2 */
-  -webkit-appearance: none;
-}
-
-/* ========================================================================
-   Component: Datepicker
- ========================================================================== */
-
-/*
- * 1. Highest z-index
- * 2. Reset dropdown width
- * 3. Set animation
- * 4. Needed for scale animation
- */
-
-.uk-datepicker {
-  /* 1 */
-  z-index: 1050;
-  /* 2 */
-  width: auto;
-  /* 3 */
-  -webkit-animation: uk-fade 0.2s ease-in-out;
-  animation: uk-fade 0.2s ease-in-out;
-  /* 4 */
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
-/* Sub-object: `uk-datepicker-nav`
-========================================================================== */
-
-.uk-datepicker-nav {
-  margin-bottom: 15px;
-  text-align: center;
-  line-height: 20px;
-}
-
-/*
- * Micro clearfix
- */
-
-.uk-datepicker-nav:before,
-.uk-datepicker-nav:after {
-  content: "";
-  display: table;
-}
-
-.uk-datepicker-nav:after {
-  clear: both;
-}
-
-/*
- * Previous and next navigation
- */
-
-.uk-datepicker-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.uk-datepicker-nav a:hover {
-  color: #444;
-}
-
-.uk-datepicker-previous {
-  float: left;
-}
-
-.uk-datepicker-next {
-  float: right;
-}
-
-.uk-datepicker-previous:after,
-.uk-datepicker-next:after {
-  width: 20px;
-  font-family: FontAwesome;
-}
-
-.uk-datepicker-previous:after {
-  content: "\f053";
-}
-
-.uk-datepicker-next:after {
-  content: "\f054";
-}
-
-/* Sub-object: `uk-datepicker-heading`
-========================================================================== */
-
-/* Sub-object: `uk-datepicker-table`
-========================================================================== */
-
-/* Block element behavior */
-
-.uk-datepicker-table {
-  width: 100%;
-}
-
-.uk-datepicker-table th,
-.uk-datepicker-table td {
-  padding: 2px;
-}
-
-.uk-datepicker-table th {
-  font-size: 12px;
-}
-
-/*
- * Item
- */
-
-.uk-datepicker-table a {
-  display: block;
-  width: 26px;
-  line-height: 24px;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-}
-
-/*
- * Sub-object: `uk-datepicker-table-muted`
- */
-
-a.uk-datepicker-table-muted {
-  color: #999;
-}
-
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-
-.uk-datepicker-table a:hover,
-.uk-datepicker-table a:focus {
-  background-color: #ddd;
-  color: #444;
-  /* 2 */
-  outline: none;
-}
-
-/* OnClick */
-
-.uk-datepicker-table a:active {
-  background-color: #ccc;
-  color: #444;
-}
-
-/*
- * Active
- */
-
-.uk-datepicker-table a.uk-active {
-  background: #2d1807;
-  color: #fff;
-}
-
-/* ========================================================================
-   Component: Placeholder
- ========================================================================== */
-
-.uk-placeholder {
-  margin-bottom: 15px;
+header {
+  background-color: #a8612c;
+  background-image: url("../../img/header-background.png");
   padding: 20px;
-  border: 1px dashed #ddd;
-  background: #fafafa;
-  color: #444;
-}
-
-/*
- * Add margin if adjacent element
- */
-
-* + .uk-placeholder {
-  margin-top: 15px;
-}
-
-/*
- * Remove margin from the last-child
- */
-
-.uk-placeholder > :last-child {
-  margin-bottom: 0;
-}
-
-/* Modifier: `uk-placeholder-large`
- ========================================================================== */
-
-.uk-placeholder-large {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-/* ========================================================================
-   Component: Form file
- ========================================================================== */
-
-/*
- * 1. Behave like form elements
- * 2. Create position context for dropdowns
- * 3. Clip content
- */
-
-.uk-form-file {
-  /* 1 */
-  display: inline-block;
-  vertical-align: middle;
-  /* 2 */
-  position: relative;
-  /* 3 */
-  overflow: hidden;
-}
-
-/*
- * 1. Required for Firefox
- * 2. Expand height and required for the cursor
- */
-
-.uk-form-file input[type="file"] {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  opacity: 0;
-  cursor: pointer;
-  /* 1 */
-  left: 0;
-  /* 2 */
-  font-size: 500px;
-}
-
-/* ========================================================================
-   Component: Progress
- ========================================================================== */
-
-/*
- * 1. Clearing
- * 2. Vertical alignment if text is used
- */
-
-.uk-progress {
-  box-sizing: border-box;
-  height: 20px;
-  margin-bottom: 15px;
-  background: #eee;
-  /* 1 */
-  overflow: hidden;
-  /* 2 */
-  line-height: 20px;
-}
-
-/*
- * Add margin if adjacent element
- */
-
-* + .uk-progress {
-  margin-top: 15px;
-}
-
-/* Sub-object: `uk-progress-bar`
- ========================================================================== */
-
-/*
- * 1. Transition
- * 2. Needed for text
- */
-
-.uk-progress-bar {
-  width: 0;
-  height: 100%;
-  background: #2d1807;
-  float: left;
-  /* 1 */
-  transition: width 0.6s ease;
-  /* 2 */
-  font-size: 12px;
-  color: #fff;
-  text-align: center;
-}
-
-/* Size modifiers
- ========================================================================== */
-
-/* Mini */
-
-.uk-progress-mini {
-  height: 6px;
-}
-
-/* Small */
-
-.uk-progress-small {
-  height: 12px;
-}
-
-/* Color modifiers
- ========================================================================== */
-
-.uk-progress-success .uk-progress-bar {
-  background-color: #8cc14c;
-}
-
-.uk-progress-warning .uk-progress-bar {
-  background-color: #faa732;
-}
-
-.uk-progress-danger .uk-progress-bar {
-  background-color: #da314b;
-}
-
-/* Modifier: `uk-progress-striped`
- ========================================================================== */
-
-.uk-progress-striped .uk-progress-bar {
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 30px 30px;
-}
-
-/*
- * Animation
- */
-
-.uk-progress-striped.uk-active .uk-progress-bar {
-  -webkit-animation: uk-progress-bar-stripes 2s linear infinite;
-  animation: uk-progress-bar-stripes 2s linear infinite;
-}
-
-@-webkit-keyframes uk-progress-bar-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 30px 0;
-  }
-}
-
-@keyframes uk-progress-bar-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 30px 0;
-  }
-}
-
-/* ========================================================================
-   Component: Upload
- ========================================================================== */
-
-/*
- * Create a box-shadow when dragging a file over the upload area
- */
-
-.uk-dragover {
-  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
-}
-
-/* ========================================================================
-   Component: Sortable
- ========================================================================== */
-
-.uk-sortable {
-  position: relative;
-}
-
-/*
- * Deactivate browser touch actions in IE11
- */
-
-.uk-sortable > * {
-  -ms-touch-action: none;
-  touch-action: none;
-}
-
-/*
- * Disables the default callout shown when you touch and hold a touch target
- * Currently only works in Webkit
- */
-
-.uk-sortable a,
-.uk-sortable img {
-  -webkit-touch-callout: none;
-}
-
-/*
- * Remove margin from the last-child
- */
-
-.uk-sortable > :last-child {
-  margin-bottom: 0;
-}
-
-/* Sub-modifier `uk-sortable-dragged`
- ========================================================================== */
-
-.uk-sortable-dragged {
-  position: absolute;
-  z-index: 1050;
-  pointer-events: none;
-}
-
-/* Sub-modifier `uk-sortable-placeholder`
- ========================================================================== */
-
-.uk-sortable-placeholder {
-  opacity: 0;
-}
-
-/* Empty List
- ========================================================================== */
-
-.uk-sortable-empty {
-  min-height: 30px;
-}
-
-/* Sub-object `uk-sortable-handle`
- ========================================================================== */
-
-/*
- * Deactivate browser touch actions in IE11
- */
-
-.uk-sortable-handle {
-  -ms-touch-action: none;
-  touch-action: none;
-}
-
-/* Hover */
-
-.uk-sortable-handle:hover {
-  cursor: move;
-}
-
-/* Sub-object `uk-sortable-moving`
- ========================================================================== */
-
-.uk-sortable-moving,
-.uk-sortable-moving * {
-  cursor: move;
-}
-
-/* ========================================================================
-   Component: Accordion
- ========================================================================== */
-
-/* Sub-object: `uk-accordion-title`
- ========================================================================== */
-
-.uk-accordion-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 5px 0;
-  background: transparent;
-  font-size: 18px;
-  line-height: 24px;
-  cursor: pointer;
-}
-
-/* Sub-object: `uk-accordion-content`
- ========================================================================== */
-
-.uk-accordion-content {
-  padding: 0 0 0 0;
-}
-
-/*
- * Micro clearfix to make panels more robust
- */
-
-.uk-accordion-content:before,
-.uk-accordion-content:after {
-  content: "";
-  display: table;
-}
-
-.uk-accordion-content:after {
-  clear: both;
-}
-
-/*
- * Remove margin from the last-child
- */
-
-.uk-accordion-content > :last-child {
-  margin-bottom: 0;
-}
-
-/***** Colors *****/
-
-/***** Uikit *****/
-
-/***** Styles *****/
-
-.title-bar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #ffffff;
-  border-bottom: 4px solid #e1e1e1;
-}
-
-footer {
-  padding: 10px;
-  background-color: #eeeeee;
-}
-
-#offcanvas-navigation .uk-panel-title {
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1em;
-}
-
-#sidebar .uk-panel-title {
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 1em;
-}
-
-#sidebar .uk-panel-box {
-  background-color: #E5914E;
-}
-
-#sidebar .uk-icon-justify {
-  width: 1.25em;
-}
-
-#top-navigation .uk-navbar-brand {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#primary-content-area,
-#login-box {
-  background-color: #f0f0f0;
-  background-image: url("../images/bg-1.png");
-}
-
-#secondary-content-area {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-#login-box form {
-  padding: 10px;
-}
-
-.uk-datepicker {
-  background-color: #E5914E;
-}
-
-.uk-modal-dialog {
-  background-image: url("../images/bg-1.png");
-}
-
-.uk-modal-header {
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  margin: -20px -20px 15px -20px;
-  padding: 20px;
-  border-bottom: 4px solid #e1e1e1;
-}
-
-.uk-modal-footer {
-  background-color: #ffffff;
-  margin-top: 15px;
-  margin: 15px -20px -20px -20px;
-  padding: 20px;
-  border-top: 4px solid #e1e1e1;
-}
-
-.uk-panel-box {
-  border-bottom: 2px solid #E5914E;
-}
-
-.uk-panel-box-secondary {
-  border-bottom: 1px solid rgba(229, 145, 78, 0.5);
-}
-
-.image-browser-images {
-  min-height: 200px;
-}
-
-img.needs-alt {
-  border-bottom: 2px solid #d85030;
 }

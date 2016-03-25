@@ -12,9 +12,6 @@
     <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
     <link href="{{ elixir("css/styles.css") }}" rel="stylesheet" media="screen">
 
-    <script src="https://use.typekit.net/kom5ltz.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
     <script type="text/javascript" charset="utf-8">
         var SITE_URL = "{{ url() }}";
         var csrf = "{{ csrf_token() }}";
@@ -24,13 +21,30 @@
         <script>
         </script>
     @endif
-
-    @include('partials.analytics.google')
 </head>
 <body>
 
 <header>
-    @yield('header')
+    <div class="uk-grid uk-flex uk-flex-middle">
+        <div class="uk-width-1-6">
+            <img src="{{ asset('img/logo-small-original.png') }}" alt="Phil Mareu Logo" width="50">
+        </div>
+        <div class="uk-width-2-3 uk-text-center">
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Projects</a>
+            </nav>
+        </div>
+        <div class="uk-width-1-6 uk-text-right">
+            <a href="#" class="uk-button">Hire Me</a>
+        </div>
+    </div>
+
+    <div class="uk-text-center">
+        <img src="{{ asset('img/pic.png') }}" alt="" class="uk-border-circle" width="100">
+        <h1>Phil Mareu</h1>
+    </div>
 </header>
 
 <div id="content">
@@ -38,7 +52,6 @@
 </div>
 
 <footer>
-    @include('partials.footer')
 </footer>
 
 <script src="{{ elixir('js/scripts.js') }}"></script>
