@@ -2,21 +2,17 @@
 
 @section('content')
 
-    <div class="uk-block uk-block-secondary uk-block-large">
+    <div class="uk-block uk-block-muted uk-block-large">
         <div class="uk-container uk-container-center">
-            <div class="uk-panel uk-text-contrast">
-                <div class="uk-grid">
-                    <div class="uk-width-1-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error exercitationem expedita illum impedit iure maiores maxime modi nemo nobis, officia quia reprehenderit repudiandae sunt vitae! Dolor enim ex nemo?</p>
-                    </div>
-                    <div class="uk-width-1-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error exercitationem expedita illum impedit iure maiores maxime modi nemo nobis, officia quia reprehenderit repudiandae sunt vitae! Dolor enim ex nemo?</p>
-                    </div>
-                    <div class="uk-width-1-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio error exercitationem expedita illum impedit iure maiores maxime modi nemo nobis, officia quia reprehenderit repudiandae sunt vitae! Dolor enim ex nemo?</p>
-                    </div>
-                </div>
+            <h2>Select Work</h2>
+            <div class="uk-grid uk-grid-width-1-2 uk-grid-width-medium-1-3" data-uk-grid-margin>
+
+                @each('work.work', $works, 'work')
+
             </div>
+
+            <a href="{{ url('work') }}">What to know more? Contact me today.</a>
+
         </div>
     </div>
 

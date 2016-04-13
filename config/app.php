@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'log' => 'single',
+    'log' => 'daily',
 
     /*
     |--------------------------------------------------------------------------
@@ -144,7 +144,9 @@ return [
         PhilMareu\Providers\AuthServiceProvider::class,
         PhilMareu\Providers\EventServiceProvider::class,
         PhilMareu\Providers\RouteServiceProvider::class,
-
+        'Philsquare\LaraManager\Providers\LaraManagerServiceProvider',
+        'Philsquare\LaraForm\LaraFormServiceProvider',
+        Intervention\Image\ImageServiceProvider::class
     ],
 
     /*
