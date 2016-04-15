@@ -22,6 +22,7 @@ class CreateWorksTable extends Migration
             $table->unsignedInteger('logo');
             $table->string('images');
             $table->string('url');
+            $table->tinyInteger('ordinal');
             $table->timestamps();
 
             $table->foreign('primary_image')->references('id')->on('images')->onUpdate('cascade')->onDelete('cascade');

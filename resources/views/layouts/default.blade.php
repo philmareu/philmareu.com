@@ -10,7 +10,7 @@
 <header class="uk-block uk-block-large uk-block-primary">
     <div class="uk-text-center">
         <h1>
-            @yield('title')
+            @yield('header-text')
         </h1>
     </div>
 </header>

@@ -19,7 +19,8 @@ class Work extends Model
         'primary_image',
         'logo',
         'images',
-        'url'
+        'url',
+        'ordinal'
     ];
 
     public function getPhotoIds()
