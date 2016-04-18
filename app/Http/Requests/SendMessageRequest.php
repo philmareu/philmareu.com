@@ -26,7 +26,6 @@ class SendMessageRequest extends Request
         return [
             'name' => 'required',
             'email' => 'required|email',
-            'subject' => 'required|max:50',
             'message' => 'required'
         ];
     }

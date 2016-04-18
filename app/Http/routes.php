@@ -6,4 +6,4 @@ Route::get('contact', 'PagesController@contact');
 Route::post('contact', 'PagesController@postContact');
 
 Route::get('work/{slug}', 'WorksController@show');
-Route::get('work', 'WorksController@index');
+//Route::get('work', 'WorksController@index');

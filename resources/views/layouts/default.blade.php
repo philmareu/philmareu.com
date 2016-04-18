@@ -5,6 +5,8 @@
 </head>
 <body>
 
+@include('laraform::alerts.default')
+
 @include('partials.navigation')
 
 <header class="uk-block uk-block-primary">

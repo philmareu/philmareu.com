@@ -6,8 +6,6 @@
 
 @section('content')
 
-    @include('laraform::alerts.default')
-
     <form action="{{ url('contact') }}" class="uk-form uk-form-stacked" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

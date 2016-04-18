@@ -38,7 +38,7 @@ class PagesController extends Controller
     {
         Mail::send('emails.contact', ['data' => $request->all()], function ($m) use ($request) {
             $m->from($request->email, $request->name);
-            $m->to('phil@philsquare.com', 'Phil Mareu')->subject($request->subject);
+            $m->to('philmareu@gmail.com', 'Phil Mareu')->subject('Message from contact form');
         });
 
         return redirect()->back()->with('success', 'Thanks for contacting me. I will get back with you soon.');

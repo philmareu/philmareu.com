@@ -6,9 +6,9 @@
 
         <div class="uk-navbar-flip">
             <ul class="uk-navbar-nav">
-                <li><a href="{{ url('work') }}">Work</a></li>
+                <li><a href="{{ url('/#work') }}" data-uk-smooth-scroll>Work</a></li>
                 <li><a href="{{ url('about') }}">About</a></li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
+                <li><a href="{{ url('#contact') }}" data-uk-smooth-scroll>Contact</a></li>
             </ul>
         </div>
     </div>

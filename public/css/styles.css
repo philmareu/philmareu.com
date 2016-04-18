@@ -1679,6 +1679,7 @@ iframe {
 
 .uk-panel-box-hover:hover {
   color: #444;
+  background-color: #f5f5f5;
 }
 
 .uk-panel-box .uk-panel-title {
@@ -2530,9 +2531,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   padding: 0 15px;
   line-height: 80px;
   /* 2 */
-  color: #444;
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5E5E5E;
+  font-size: 18px;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -2552,8 +2553,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li.uk-open > a {
-  background-color: #f5f5f5;
-  color: #444;
+  background-color: transparent;
+  color: #2b2b2b;
   /* 3 */
   outline: none;
 }
@@ -2580,7 +2581,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 
 .uk-navbar-nav-subtitle > div {
-  margin-top: -26px;
+  margin-top: -24px;
   font-size: 10px;
   line-height: 12px;
 }
@@ -11340,6 +11341,10 @@ a.uk-thumbnail:focus {
 
 .uk-dotnav-vertical > * {
   float: none;
+}
+
+.hook-panel-box-hover {
+  background-color: #f5f5f5;
 }
 
 header {

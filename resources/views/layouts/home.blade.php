@@ -18,6 +18,7 @@
             <a href="http://github.com/philmareu"><i class="uk-icon-github uk-icon-button"></i></a>
             <a href="https://www.linkedin.com/in/philmareu"><i class="uk-icon-linkedin uk-icon-button"></i></a>
             <a href="https://www.instagram.com/philmareu/"><i class="uk-icon-instagram uk-icon-button"></i></a>
+            <a href="mailto:philmareu@gmail.com"><i class="uk-icon-envelope uk-icon-button"></i></a>
         </p>
     </div>
 </header>
@@ -26,7 +27,10 @@
     @yield('content')
 </div>
 
-<footer class="uk-block uk-block-secondary">
+<footer class="uk-block">
+    <div class="uk-width-medium-1-2 uk-container-center">
+        @include('partials.footer')
+    </div>
 </footer>
 
 <script src="{{ elixir('js/scripts.js') }}"></script>
