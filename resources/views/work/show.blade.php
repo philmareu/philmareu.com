@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('header-text')
-    <img src="{{ url('images/original/' . $work->logoImage->filename) }}" alt="{{ $work->logoImage->alt }}" class="uk-width-1-1 uk-width-small-1-4">
+    <img src="{{ url('images/work-header-logo/' . $work->logoImage->filename) }}" alt="{{ $work->logoImage->alt }}">
 @endsection
 
 @section('content')

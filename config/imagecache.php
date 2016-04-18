@@ -31,8 +31,7 @@ return array(
     */
     
     'paths' => array(
-        public_path('upload'),
-        public_path('images')
+        public_path('img')
     ),
 
     /*
@@ -55,6 +54,9 @@ return array(
         'small' => 'Intervention\Image\Templates\Small',
         'medium' => 'Intervention\Image\Templates\Medium',
         'large' => 'Intervention\Image\Templates\Large',
+
+        'primary-work-image' => 'PhilMareu\ImageFilters\PrimaryWorkImage',
+        'work-header-logo' => 'PhilMareu\ImageFilters\WorkHeaderLogo'
     ),
 
     /*
