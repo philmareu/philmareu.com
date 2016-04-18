@@ -16,22 +16,25 @@
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="uk-form-row uk-margin-bottom">
+        <span class="uk-text-danger">{{ $errors->first('name') }}</span>
         <div class="uk-form-icon uk-width-1-1">
             <i class="uk-icon-user"></i>
-            <input type="name" placeholder="Name" class="uk-width-1-1">
+            <input type="text" name="name" placeholder="Name" class="uk-width-1-1" value="{{ old('name') }}">
         </div>
     </div>
 
     <div class="uk-form-row uk-margin-bottom">
+        <span class="uk-text-danger">{{ $errors->first('email') }}</span>
         <div class="uk-form-icon uk-width-1-1">
             <i class="uk-icon-envelope"></i>
-            <input type="email" placeholder="Email" class="uk-width-1-1">
+            <input type="email" placeholder="Email" class="uk-width-1-1" name="email" value="{{ old('email') }}">
         </div>
     </div>
 
     <div class="uk-form-row">
+        <span class="uk-text-danger">{{ $errors->first('message') }}</span>
         <div class="uk-form-controls">
-            <textarea name="message" class="uk-width-1-1" placeholder="Message"></textarea>
+            <textarea name="message" class="uk-width-1-1" placeholder="Message">{{ old('message') }}</textarea>
         </div>
     </div>
 
