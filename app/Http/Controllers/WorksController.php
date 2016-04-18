@@ -12,14 +12,15 @@ class WorksController extends Controller
 {
     public function index(Work $work)
     {
-        $works = $work->with('primaryImage')->get();
+        $works = $work->with('primaryImage')->orderBy('ordinal', 'asc')->get();
 
         return view('work.index', compact('works'));
     }
 
     public function show(Request $request, Work $work)
     {
-        $work = $work->with('objects', 'logoImage')->where('slug', $request->segment(2))->first();
+        $work = $work->with('objects', 'logoImage')->where('slug', $request->segment(2))
+            ->first();
 
         return view('work.show', compact('work'));
     }

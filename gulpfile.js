@@ -17,6 +17,7 @@ elixir(function(mix) {
             'vendor/jquery-1.11.3.min.js',
             'vendor/uikit-2.25.0/uikit.js',
             'vendor/uikit-2.25.0/components/slideset.js',
+            'vendor/uikit-2.25.0/components/lightbox.js',
             'scripts.js',
         ], 'public/js/scripts.js')
         .version(['public/css/styles.css', 'public/js/scripts.js'])
