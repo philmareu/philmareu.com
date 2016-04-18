@@ -27,6 +27,13 @@ class PagesController extends Controller
         return view('pages.default', compact('page'));
     }
 
+    public function about(Request $request, Page $page)
+    {
+        $page = $page->with('objects')->where('uri', $request->path())->first();
+
+        return view('pages.about', compact('page'));
+    }
+
     public function contact(Request $request, Page $page)
     {
         $page = $page->with('objects')->where('uri', $request->path())->first();

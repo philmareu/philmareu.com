@@ -33,11 +33,7 @@
                     @endif
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="uk-block uk-block-large">
-        <div class="uk-container uk-container-center">
             @foreach($work->objects as $object)
                 @if(view()->exists('vendor/laramanager/objects/' . $object->slug . '/display'))
                     @include('vendor/laramanager/objects/' . $object->slug . '/display')
@@ -47,7 +43,4 @@
             @endforeach
         </div>
     </div>
-
-    <a href="{{ url('work') }}">What to know more? Contact me today.</a>
-
 @endsection

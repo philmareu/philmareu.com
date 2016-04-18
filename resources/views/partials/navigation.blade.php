@@ -6,8 +6,12 @@
 
         <div class="uk-navbar-flip">
             <ul class="uk-navbar-nav">
-                <li><a href="{{ url('/#work') }}" data-uk-smooth-scroll>Work</a></li>
-                <li><a href="{{ url('about') }}">About</a></li>
+                @if($path != "/")
+                    <li><a href="{{ url('/#work') }}">Work</a></li>
+                @else
+                    <li><a href="{{ url('/#work') }}" data-uk-smooth-scroll>Work</a></li>
+                @endif
+                <li class="{{ $path == 'about' ? 'uk-active' : '' }}"><a href="{{ url('about') }}">About</a></li>
                 <li><a href="{{ url('#contact') }}" data-uk-smooth-scroll>Contact</a></li>
             </ul>
         </div>
