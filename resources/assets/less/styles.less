@@ -3,14 +3,71 @@
 @import "vendor/uikit-2.25.0/components/slidenav";
 @import "vendor/uikit-2.25.0/components/dotnav";
 
+@import "vars";
+
+// Base
+//@base-body-background:                          #fff;
+@base-body-font-family:                         "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-body-font-weight:                         400;
+@base-body-font-size:                           18px;
+@base-body-line-height:                         30px;
+@base-body-color:                               @text-body;
+//
+//@base-link-color:                               #07D;
+//@base-link-text-decoration:                     none;
+//@base-link-hover-color:                         #059;
+//@base-link-hover-text-decoration:               underline;
+//
+//@base-code-color:                               #D05;
+//@base-code-font-size:                           12px;
+//@base-code-font-family:                         Consolas, monospace, serif;
+//@base-em-color:                                 #D05;
+//@base-ins-background:                           #ffa;
+//@base-ins-color:                                #444;
+//@base-mark-background:                          #ffa;
+//@base-mark-color:                               #444;
+//@base-quote-font-style:                         italic;
+//
+//@base-margin-vertical:                          15px;
+//
+@base-heading-font-family:                      "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-heading-font-weight:                      300;
+@base-heading-color:                            @text-header;
+@base-heading-text-transform:                   uppercase;
+//@base-heading-margin-top:                       25px;
+//@base-h1-font-size:                             36px;
+//@base-h1-line-height:                           42px;
+//@base-h2-font-size:                             24px;
+//@base-h2-line-height:                           30px;
+//@base-h3-font-size:                             18px;
+//@base-h3-line-height:                           24px;
+//@base-h4-font-size:                             16px;
+//@base-h4-line-height:                           22px;
+//@base-h5-font-size:                             14px;
+//@base-h5-line-height:                           20px;
+//@base-h6-font-size:                             12px;
+//@base-h6-line-height:                           18px;
+
+// Panel
+@panel-title-font-weight:                       300;
+@panel-title-color:                             @text-header;
+@panel-title-text-transform:                    uppercase;
+@panel-box-background:                          white;
+
 // Navbar
 @navbar-nav-height:                             80px;
+@navbar-background:                             white;
+@navbar-color:                                  #444;
+@navbar-link-color:                             #07D;
+@navbar-link-hover-color:                       #059;
 
 // Icon
 @icon-font-path:                                "../../fonts";
 
-//header {
-//  background-color: #a8612c;
-//  background-image: url("../../img/header-background.png");
-//  padding: 20px;
-//}
+// Block
+@block-primary-background:                      white;
+
+header {
+  font-size: 22px;
+  line-height: 35px;
+}
