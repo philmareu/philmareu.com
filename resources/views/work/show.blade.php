@@ -10,7 +10,7 @@
         <div class="uk-container uk-container-center">
             <div class="uk-grid">
                 <div class="uk-width-medium-1-2">
-                    <div data-uk-slideset="{default: 1, medium: 1, large: 2}">
+                    <div data-uk-slideset="{default: 1, medium: 1, large: 1}">
                         <div class="uk-slidenav-position">
                             <ul class="uk-grid uk-grid-collapse uk-slideset uk-margin-bottom">
                                 @each('work.slide', $work->photos(), 'image')
@@ -22,9 +22,15 @@
                     </div>
                 </div>
                 <div class="uk-width-medium-1-2">
-                    <h2>{{ $work->title }}</h2>
+                    <h1>{{ $work->title }}</h1>
 
                     {!! $work->description !!}
+
+                    @if($work->url != "")
+                        <p>
+                            <a href="{{ $work->url }}" class="uk-button uk-button-large uk-button-primary">Check it out</a>
+                        </p>
+                    @endif
                 </div>
             </div>
         </div>
