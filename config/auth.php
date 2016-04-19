@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => PhilMareu\User::class,
+    'model' => PhilMareu\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

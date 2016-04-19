@@ -1,247 +1,92 @@
 @import "vendor/uikit-2.25.0/uikit";
+@import "vendor/uikit-2.25.0/components/slider";
+@import "vendor/uikit-2.25.0/components/slidenav";
+@import "vendor/uikit-2.25.0/components/dotnav";
 
-/***** Additional Uikit Components *****/
-@import "vendor/uikit-2.25.0/components/sticky.less";
-@import "vendor/uikit-2.25.0/components/form-select";
-@import "vendor/uikit-2.25.0/components/datepicker";
-@import "vendor/uikit-2.25.0/components/placeholder";
-@import "vendor/uikit-2.25.0/components/form-file";
-@import "vendor/uikit-2.25.0/components/progress";
-@import "vendor/uikit-2.25.0/components/upload";
-@import "vendor/uikit-2.25.0/components/sortable";
-@import "vendor/uikit-2.25.0/components/accordion";
+@import "vars";
 
+// Base
+//@base-body-background:                          #fff;
+@base-body-font-family:                         "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-body-font-weight:                         400;
+@base-body-font-size:                           18px;
+@base-body-line-height:                         30px;
+@base-body-color:                               @text-body;
+//
+//@base-link-color:                               #07D;
+//@base-link-text-decoration:                     none;
+//@base-link-hover-color:                         #059;
+//@base-link-hover-text-decoration:               underline;
+//
+//@base-code-color:                               #D05;
+//@base-code-font-size:                           12px;
+//@base-code-font-family:                         Consolas, monospace, serif;
+//@base-em-color:                                 #D05;
+//@base-ins-background:                           #ffa;
+//@base-ins-color:                                #444;
+//@base-mark-background:                          #ffa;
+//@base-mark-color:                               #444;
+//@base-quote-font-style:                         italic;
+//
+//@base-margin-vertical:                          15px;
+//
+@base-heading-font-family:                      "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-heading-font-weight:                      300;
+@base-heading-color:                            @text-header;
+@base-heading-text-transform:                   uppercase;
+//@base-heading-margin-top:                       25px;
+//@base-h1-font-size:                             36px;
+//@base-h1-line-height:                           42px;
+//@base-h2-font-size:                             24px;
+//@base-h2-line-height:                           30px;
+//@base-h3-font-size:                             18px;
+//@base-h3-line-height:                           24px;
+//@base-h4-font-size:                             16px;
+//@base-h4-line-height:                           22px;
+//@base-h5-font-size:                             14px;
+//@base-h5-line-height:                           20px;
+//@base-h6-font-size:                             12px;
+//@base-h6-line-height:                           18px;
 
-/***** Colors *****/
-@orange: #E5914E;
-@dark: darken(@orange, 50%);
+// Panel
+@panel-title-font-weight:                       300;
+@panel-title-color:                             @text-header;
+@panel-title-text-transform:                    uppercase;
+@panel-box-background:                          white;
+.hook-panel-box-hover {
+  background-color: @brand-white;
+}
 
-/***** Uikit *****/
-@base-body-background:                          @orange;
-@base-body-font-family:                         "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@base-body-font-weight:                         300;
-@base-body-color:                               #5C4E46;
-
-@base-heading-font-family:                      "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@base-heading-font-weight:                      500;
-@base-heading-color: #232323;
-
-@nav-header-font-weight:                        500;
-
-@navbar-background:                             @dark;
+// Navbar
 @navbar-nav-height:                             60px;
-@navbar-brand-font-size:                        22px;
-@navbar-brand-color:                            @text-contrast-color;
-@navbar-brand-hover-color:                      fade(@text-contrast-color, 50%);
+@navbar-background:                             white;
+@navbar-color:                                  #444;
+@navbar-link-color:                             #07D;
+@navbar-link-hover-color:                       #059;
+@navbar-nav-font-family:                        "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@navbar-nav-color:                              @text-body;
+@navbar-nav-font-size:                          18px;
+@navbar-nav-font-weight:                        normal;
 @navbar-nav-hover-background:                   transparent;
-@navbar-nav-onclick-color:                      fade(@text-contrast-color, 50%);
-@navbar-nav-onclick-background:                 transparent;
-@navbar-nav-color:                              @text-contrast-color;
-@navbar-nav-hover-color:                        fade(@text-contrast-color, 50%);
-@navbar-nav-font-family:                        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@navbar-nav-hover-color:                        @text-header;
 
-@nav-side-active-background:                    rgba(0,0,0,0.25);
+// Icon
+@icon-font-path:                                "../../fonts";
 
-@nav-navbar-color:                              @text-contrast-color;
-@nav-navbar-hover-background:                   fade(@text-contrast-color, 10%);
-@nav-navbar-hover-color:                        @text-contrast-color;
-@nav-dropdown-hover-background:                 @orange;
+// Block
+@block-primary-background:                      white;
 
-@dropdown-navbar-background:                    @navbar-background;
-@dropdown-navbar-color:                         @text-contrast-color;
-@dropdown-navbar-animation:                     none;
+@media (min-width: @breakpoint-large) {
 
-
-@dropdown-scrollable-height:                    200px;
-
-@form-background:                               rgba(255, 255, 255, .9);
-@form-focus-border:                             fade(@orange, 80%);
-@form-focus-background:                         rgba(255, 255, 255, .3);
-@form-stacked-font-weight:                      500;
-@form-color:                                    @base-body-color;
-
-
-@datepicker-table-color:                        @text-contrast-color;
-@datepicker-table-active-background:            @dark;
-@datepicker-table-active-color:                 #fff;
-@datepicker-nav-color:                          @text-contrast-color;
-
-@panel-box-primary-background:                  fade(@orange, 30%);
-@panel-box-primary-color:                       @base-body-color;
-@panel-box-primary-title-color:                 @base-body-color;
-
-@panel-box-secondary-background:                fade(@orange, 10%);
-@panel-box-secondary-color:                     @base-body-color;
-@panel-box-secondary-hover-color:               @panel-box-secondary-color;
-@panel-box-secondary-title-color:               @base-body-color;
-
-@accordion-title-margin-bottom:                 0;
-@accordion-title-background:                    transparent;
-@accordion-title-padding-horizontal:            0;
-
-@button-background:                             fade(@orange, 30%);
-@button-color:                                  @base-body-color;
-@button-hover-background:                       fade(@orange, 50%);
-@button-hover-color:                            @base-body-color;
-
-@button-primary-background:                     @orange;
-@button-primary-color:                          #fff;
-@button-primary-hover-background:               @orange;
-@button-primary-hover-color:                    fff;
-@button-primary-active-background:              @orange;
-@button-primary-active-color:                   #fff;
-
-// Tab
-
-@tab-border:                                    fade(@orange, 30%);
-@tab-border-width:                              3px;
-@tab-color:                                     @base-body-color;
-@tab-hover-border:                              fade(@orange, 30%);
-@tab-hover-background:                          fade(@orange, 30%);
-@tab-hover-color:                               @base-body-color;
-@tab-active-border:                             fade(@orange, 30%);
-@tab-active-background:                         fade(@orange, 30%);
-@tab-active-color:                              @base-body-color;
-
-// Pagination
-@pagination-background:                         fade(@orange, 30%);
-@pagination-color:                              @base-body-color;
-@pagination-hover-background:                   @orange;
-@pagination-hover-color:                        #fff;
-@pagination-onclick-background:                 fade(@orange, 10%);
-@pagination-onclick-color:                      @base-body-color;
-
-@pagination-active-background:                  @orange;
-@pagination-active-color:                       #fff;
-
-@pagination-disabled-background:                fade(@orange, 10%);
-@pagination-disabled-color:                     @base-body-color;
-
-// Progress
-@progress-bar-background:                       @dark;
-
-/***** Styles *****/
-.title-bar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #ffffff;
-  border-bottom: 4px solid #e1e1e1;
-
-  span.title {
-
-  }
-}
-
-footer {
-  padding: 10px;
-  background-color: #eeeeee;
-}
-
-#offcanvas-navigation {
-  //  .uk-offcanvas-bar {
-  //    background-color: @orange;
-  //  }
-
-  .uk-panel-title {
-    text-transform: uppercase;
-    color: fade(#FFFFFF, 90%);
-    font-size: 1em;
+  .nav-container {
+    .uk-container;
+    .uk-container-center;
+    .uk-margin-top;
   }
 
-  //  .uk-nav-offcanvas > li > a {
-  //    color: #FFFFFF;
-  //  }
-}
-
-#sidebar, {
-
-  .uk-panel-title {
-    text-transform: uppercase;
-    color: fade(#000000, 90%);
-    font-size: 1em;
+  header {
+    font-size: 22px;
+    line-height: 35px;
   }
 
-  .uk-panel-box {
-    background-color: @orange;
-  }
-
-  .uk-nav > li > a {
-
-  }
-
-  .uk-icon-justify {
-    width: 1.25em;
-  }
-}
-
-#top-navigation {
-  .uk-navbar-brand {
-    font-family: @base-heading-font-family;
-  }
-}
-
-#primary-content-area, #login-box {
-  background-color: #f0f0f0;
-  background-image: url("../images/bg-1.png");
-}
-
-#secondary-content-area {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-#login-box {
-
-  form {
-    padding: 10px;
-  }
-
-}
-
-.uk-datepicker {
-  background-color: @orange;
-}
-
-.uk-modal-dialog {
-  background-image: url("../images/bg-1.png");
-}
-
-.uk-modal-header {
-  background-color: #ffffff;
-  margin-bottom: 15px;
-  margin: -20px -20px 15px -20px;
-  padding: 20px;
-  border-bottom: 4px solid #e1e1e1;
-}
-
-.uk-modal-footer {
-  background-color: #ffffff;
-  margin-top: 15px;
-  margin: 15px -20px -20px -20px;
-  padding: 20px;
-  border-top: 4px solid #e1e1e1;
-}
-
-.uk-panel-box {
-  border-bottom: 2px solid @orange;
-}
-
-.uk-panel-box-secondary {
-  border-bottom: 1px solid fade(@orange, 50%);
-}
-
-.uk-accordion-title {
-
-}
-
-.image-browser-images {
-  min-height: 200px;
-}
-
-.uk-accordion-content {
-//  background-color: fade(@orange, 10%);
-}
-
-img.needs-alt {
-  border-bottom: 2px solid @text-danger-color;
 }
