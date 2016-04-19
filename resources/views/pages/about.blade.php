@@ -8,7 +8,7 @@
 @section('content')
 
     <div class="uk-block uk-block-muted">
-        <div class="uk-width-1-2 uk-container-center">
+        <div class="uk-container uk-width-medium-1-2 uk-container-center">
 
             @foreach($page->objects as $object)
                 @if(view()->exists('vendor/laramanager/objects/' . $object->slug . '/display'))

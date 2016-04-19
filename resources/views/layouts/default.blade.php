@@ -22,7 +22,7 @@
 </div>
 
 <footer class="uk-block">
-    <div class="uk-width-medium-1-2 uk-container-center">
+    <div class="uk-container uk-width-medium-1-2 uk-container-center">
         @include('partials.footer')
     </div>
 </footer>

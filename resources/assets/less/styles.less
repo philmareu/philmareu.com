@@ -58,7 +58,7 @@
 }
 
 // Navbar
-@navbar-nav-height:                             80px;
+@navbar-nav-height:                             60px;
 @navbar-background:                             white;
 @navbar-color:                                  #444;
 @navbar-link-color:                             #07D;
@@ -76,7 +76,17 @@
 // Block
 @block-primary-background:                      white;
 
-header {
-  font-size: 22px;
-  line-height: 35px;
+@media (min-width: @breakpoint-large) {
+
+  .nav-container {
+    .uk-container;
+    .uk-container-center;
+    .uk-margin-top;
+  }
+
+  header {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
 }
