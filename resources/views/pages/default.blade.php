@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('title')
+    {{ $page->title }}
+@endsection
+
 @section('header-text')
     {{ $page->title }}
 @endsection

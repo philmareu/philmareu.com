@@ -1,5 +1,9 @@
 @extends('layouts.home')
 
+@section('title')
+    Home
+@endsection
+
 @section('content')
 
     <div class="uk-block uk-block-muted uk-block-large">

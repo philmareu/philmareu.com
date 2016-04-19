@@ -16,7 +16,7 @@
         <p>Hi, I’m Phil Mareu. I am a professional web designer and developer with almost 10 years of experience. I strive to build the best UI/UX for web applications and drive it with sensible coding practices and techniques. When I’m not building web things you can find me playing disc golf, hiking or enjoying a tasty beverage while BBQing.</p>
         <p>
             <a href="http://twitter.com/philmareu"><i class="uk-icon-twitter uk-icon-button"></i></a>
-            <a href="http://github.com/philmareu"><i class="uk-icon-github uk-icon-button"></i></a>
+            <a href="http://github.com/philsquare"><i class="uk-icon-github uk-icon-button"></i></a>
             <a href="https://www.linkedin.com/in/philmareu"><i class="uk-icon-linkedin uk-icon-button"></i></a>
             <a href="https://www.instagram.com/philmareu/"><i class="uk-icon-instagram uk-icon-button"></i></a>
             <a href="mailto:philmareu@gmail.com"><i class="uk-icon-envelope uk-icon-button"></i></a>

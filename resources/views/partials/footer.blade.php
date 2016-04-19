@@ -3,7 +3,7 @@
     <p>Currently, I am looking for remote contracting opportunities. Please feel free by phone, email or through the form below. Thanks!</p>
 </div>
 
-<div class="uk-grid uk-text-center uk-margin-bottom">
+<div class="uk-grid uk-grid-collapse uk-grid-divider uk-text-center uk-margin-bottom">
     <div class="uk-width-medium-1-2">
         <span class="phone-number"><i class="uk-icon-phone"></i> 785-813-1799</span>
     </div>

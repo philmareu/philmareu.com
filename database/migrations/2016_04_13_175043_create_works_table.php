@@ -17,7 +17,7 @@ class CreateWorksTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('summary');
-            $table->string('description');
+            $table->text('description');
             $table->unsignedInteger('primary_image');
             $table->unsignedInteger('logo');
             $table->string('images');
