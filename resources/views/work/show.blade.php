@@ -13,7 +13,7 @@
                     <div data-uk-slideset="{default: 1, medium: 1, large: 1}">
                         <div class="uk-slidenav-position">
                             <ul class="uk-grid uk-grid-collapse uk-slideset uk-margin-bottom">
-                                @each('work.slide', $work->photos(), 'image')
+                                @each('work.slide', $work->gallery, 'image')
                             </ul>
                             <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
                             <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
@@ -34,13 +34,7 @@
                 </div>
             </div>
 
-            @foreach($work->objects as $object)
-                @if(view()->exists('vendor/laramanager/objects/' . $object->slug . '/display'))
-                    @include('vendor/laramanager/objects/' . $object->slug . '/display')
-                @else
-                    @include('laramanager::objects/' . $object->slug . '/display')
-                @endif
-            @endforeach
+            @each('laramanager::objects.render', $work->objects, 'object')
         </div>
     </div>
 @endsection
