@@ -4,6 +4,7 @@ namespace PhilMareu\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Philsquare\LaraManager\Logging\ExceptionLogging;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -30,6 +31,8 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
+        new ExceptionLogging($e);
+
         return parent::report($e);
     }
 
