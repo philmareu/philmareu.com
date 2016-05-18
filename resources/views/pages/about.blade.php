@@ -13,7 +13,6 @@
 
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-width-medium-1-2 uk-container-center">
-
             @each('laramanager::objects.render', $page->objects, 'object')
         </div>
     </div>
