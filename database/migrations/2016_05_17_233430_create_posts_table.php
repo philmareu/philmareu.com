@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration
             $table->boolean('published');
             $table->dateTime('posted_at');
             $table->string('title');
-            $table->string('summary');
             $table->string('slug');
             $table->text('body');
             $table->timestamps();

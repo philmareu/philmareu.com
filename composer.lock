@@ -1169,16 +1169,16 @@
         },
         {
             "name": "philsquare/laramanager",
-            "version": "0.6.2",
+            "version": "0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philsquare/LaraManager.git",
-                "reference": "db51f5092dc3344d3434b6ba4e42d8651054ac66"
+                "reference": "70449a1ed5169a85d4f87b2c2a0afbebf3c4761b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philsquare/LaraManager/zipball/db51f5092dc3344d3434b6ba4e42d8651054ac66",
-                "reference": "db51f5092dc3344d3434b6ba4e42d8651054ac66",
+                "url": "https://api.github.com/repos/philsquare/LaraManager/zipball/70449a1ed5169a85d4f87b2c2a0afbebf3c4761b",
+                "reference": "70449a1ed5169a85d4f87b2c2a0afbebf3c4761b",
                 "shasum": ""
             },
             "require": {
@@ -1209,7 +1209,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2016-05-17 23:00:23"
+            "time": "2016-05-18 00:20:36"
         },
         {
             "name": "psr/http-message",
