@@ -1,5 +1,13 @@
 @extends('layouts.default')
 
+@section('title')
+    Blog
+@endsection
+
+@section('header-text')
+    Blog
+@endsection
+
 @section('content')
 
     <div class="uk-block uk-block-muted">
@@ -7,6 +15,5 @@
             @each('posts.post', $posts, 'post')
         </div>
     </div>
-
 
 @endsection

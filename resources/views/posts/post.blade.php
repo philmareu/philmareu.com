@@ -1,2 +1,2 @@
 <h3 class="uk-margin-bottom-remove"><a href="{{ url('blog/' . $post->posted_at->format('Y/m/d') . '/' . $post->slug) }}">{{ $post->title }}</a></h3>
-<div class="uk-text-muted">{{ $post->posted_at->format('M jS, Y') }}</div>
+<p class="uk-text-muted uk-margin-top-remove">{{ $post->posted_at->format('M jS, Y') }}</p>
