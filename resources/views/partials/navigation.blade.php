@@ -11,6 +11,7 @@
                 @else
                     <li><a href="{{ url('/#work') }}" data-uk-smooth-scroll>Work</a></li>
                 @endif
+                <li class="{{ $path == 'blog' ? 'uk-active' : '' }}"><a href="{{ url('blog') }}">Blog</a></li>
                 <li class="{{ $path == 'about' ? 'uk-active' : '' }}"><a href="{{ url('about') }}">About</a></li>
                 <li><a href="{{ url('#contact') }}" data-uk-smooth-scroll>Contact</a></li>
             </ul>

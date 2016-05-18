@@ -13,14 +13,7 @@
 
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-width-medium-1-2 uk-container-center">
-
-            @foreach($page->objects as $object)
-                @if(view()->exists('vendor/laramanager/objects/' . $object->slug . '/display'))
-                    @include('vendor/laramanager/objects/' . $object->slug . '/display')
-                @else
-                    @include('laramanager::objects/' . $object->slug . '/display')
-                @endif
-            @endforeach
+            @each('laramanager::objects.render', $page->objects, 'object')
         </div>
     </div>
 

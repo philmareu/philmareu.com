@@ -9,15 +9,27 @@ use PhilMareu\Http\Requests;
 use PhilMareu\Http\Requests\SendMessageRequest;
 use PhilMareu\Models\Page;
 use PhilMareu\Models\Work;
+use PhilMareu\Repository\PostRepository;
 
 class PagesController extends Controller
 {
+    protected $postRepository;
+
+    public function __construct(PostRepository $postRepository)
+    {
+        $this->postRepository = $postRepository;
+    }
+
     public function home(Page $page, Work $work)
     {
         $page = $page->with('objects')->where('uri', '/')->first();
         $works = $work->with('primaryImage')->orderBy('ordinal', 'asc')->get();
+        $posts = $this->postRepository->getRecent();
 
-        return view('pages.home', compact('page', 'works'));
+        return view('pages.home')
+            ->with('page', $page)
+            ->with('works', $works)
+            ->with('posts', $posts);
     }
 
     public function page(Request $request, Page $page)

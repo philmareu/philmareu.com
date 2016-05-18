@@ -7,10 +7,11 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "philsquare/laramanager": "^0.5.12",
+        "philsquare/laramanager": "^0.6.0",
         "intervention/image": "^2.3",
         "intervention/imagecache": "^2.3",
-        "guzzlehttp/guzzle": "~5.3|~6.0"
+        "guzzlehttp/guzzle": "~5.3|~6.0",
+        "philsquare/laraform": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
