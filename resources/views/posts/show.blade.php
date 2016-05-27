@@ -13,7 +13,8 @@
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-width-medium-1-2 uk-container-center">
             <div class="meta uk-text-muted">Posted on {{ $post->posted_at->format('M jS, Y') }}</div>
-            {!! $post->body !!}
+
+            <div id="post">{!! $post->body !!}</div>
 
             <div id="disqus_thread"></div>
         </div>
@@ -23,6 +24,11 @@
 
 @section('scripts')
     <script>
+
+        var post = $('#post');
+        var html = post.html();
+        post.html(marked(html));
+
         var url = '{{ url('blog/' . $post->posted_at->format('Y/m/d') . '/' . $post->slug) }}';
         var id = 'post-' + '{{ $post->id }}';
         var title = '{{ $post->title }}';
