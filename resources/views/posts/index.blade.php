@@ -11,8 +11,10 @@
 @section('content')
 
     <div class="uk-block uk-block-muted">
-        <div class="uk-container uk-width-medium-1-2 uk-container-center">
-            @each('posts.post', $posts, 'post')
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid" data-uk-grid-margin>
+                @each('posts.post', $posts, 'post')
+            </div>
         </div>
     </div>
 
