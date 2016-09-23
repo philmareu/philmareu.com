@@ -15,15 +15,21 @@ class PagesController extends Controller
 {
     protected $postRepository;
 
-    public function __construct(PostRepository $postRepository)
+    protected $page;
+
+    protected $work;
+
+    public function __construct(PostRepository $postRepository, Page $page, Work $work)
     {
         $this->postRepository = $postRepository;
+        $this->page = $page;
+        $this->work = $work;
     }
 
-    public function home(Page $page, Work $work)
+    public function home()
     {
-        $page = $page->with('objects')->where('uri', '/')->first();
-        $works = $work->with('primaryImage')->orderBy('ordinal', 'asc')->get();
+        $page = $this->page->with('objects')->where('uri', '/')->first();
+        $works = $this->work->with('primaryImage')->orderBy('ordinal', 'asc')->get();
         $posts = $this->postRepository->getRecent();
 
         return view('pages.home')
@@ -32,23 +38,23 @@ class PagesController extends Controller
             ->with('posts', $posts);
     }
 
-    public function page(Request $request, Page $page)
+    public function page(Request $request)
     {
-        $page = $page->with('objects')->where('uri', $request->path())->first();
+        $page = $this->page->with('objects')->where('uri', $request->path())->first();
 
         return view('pages.default', compact('page'));
     }
 
-    public function about(Request $request, Page $page)
+    public function about(Request $request)
     {
-        $page = $page->with('objects')->where('uri', $request->path())->first();
+        $page = $this->page->with('objects')->where('uri', $request->path())->first();
 
         return view('pages.about', compact('page'));
     }
 
-    public function contact(Request $request, Page $page)
+    public function contact(Request $request)
     {
-        $page = $page->with('objects')->where('uri', $request->path())->first();
+        $page = $this->page->with('objects')->where('uri', $request->path())->first();
 
         return view('pages.contact', compact('page'));
     }
