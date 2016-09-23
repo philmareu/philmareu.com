@@ -40,7 +40,7 @@
 
     <div class="uk-form-row">
         <div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-4">
-            <input type="submit" name="submit" value="Send" class="uk-button uk-width-1-1">
+            <input type="submit" name="submit" value="Send" class="uk-button uk-width-1-1 uk-text-contrast">
         </div>
     </div>
 </form>
