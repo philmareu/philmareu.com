@@ -1,6 +1,6 @@
-<h2 id="contact">Contact Me</h2>
+<h2 id="contact">Hire Me</h2>
 <div class="uk-alert">
-    <p>Currently, I am looking for remote contracting opportunities. Please feel free to contact me by phone, email, or the form below. Thanks!</p>
+    <p>Currently, I am looking for part-time remote contracting opportunities. Please feel free to contact me by phone, email, or the form below. Thanks!</p>
 </div>
 
 <div class="uk-grid uk-grid-collapse uk-grid-divider uk-text-center uk-margin-bottom">
