@@ -9,7 +9,7 @@
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-container-center uk-margin-bottom">
             <h2>Recent Posts</h2>
-            <div class="uk-grid" data-uk-grid-margin>
+            <div class="uk-grid" data-uk-grid-margin="{target:'.uk-panel'}">
                 @each('posts.post', $posts, 'post')
             </div>
         </div>

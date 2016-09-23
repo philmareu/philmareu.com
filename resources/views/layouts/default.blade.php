@@ -21,10 +21,8 @@
     @yield('content')
 </div>
 
-<footer class="uk-block">
-    <div class="uk-container uk-width-medium-1-2 uk-container-center">
-        @include('partials.footer')
-    </div>
+<footer>
+    @include('partials.footer')
 </footer>
 
 <script src="{{ elixir('js/scripts.js') }}"></script>

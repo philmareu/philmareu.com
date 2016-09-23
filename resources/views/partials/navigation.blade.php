@@ -13,7 +13,7 @@
             <li class="{{ $path == 'blog' ? 'uk-active' : '' }}"><a href="{{ url('blog') }}">Blog</a></li>
             <li class="{{ $path == 'about' ? 'uk-active' : '' }}"><a href="{{ url('about') }}">About</a></li>
         </ul>
-        <div class="uk-navbar-content"><a href="{{ url('#contact') }}" class="uk-button uk-button-primary">Hire Me</a></div>
+        <div class="uk-navbar-content"><a href="{{ url('#contact') }}" class="uk-button">Hire Me</a></div>
     </div>
 
 </nav>

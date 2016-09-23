@@ -14,8 +14,8 @@
 @base-body-color:                               @text-body;
 //
 @base-link-color:                               @links;
-//@base-link-text-decoration:                     none;
-//@base-link-hover-color:                         #059;
+@base-link-text-decoration:                     none;
+@base-link-hover-color:                         darken(@links, 20%);
 //@base-link-hover-text-decoration:               underline;
 //
 //@base-code-color:                               #D05;
@@ -71,12 +71,12 @@
 @navbar-nav-hover-color:                        @text-header;
 
 // Buttons
-@button-background:                             #473F31;
+@button-background:                             #4CAF8D;
 @button-color:                                  @brand-white;
-@button-hover-background:                       lighten(#473F31, 20%);
+@button-hover-background:                       lighten(#4CAF8D, 20%);
 @button-hover-color:                            lighten(@brand-white, 20%);
-@button-active-background:                      @brand-white;
-@button-active-color:                           #473F31;
+@button-active-background:                      #4CAF8D;
+@button-active-color:                           @brand-white;
 
 @button-primary-background:                     @links;
 @button-primary-color:                          @brand-white;
@@ -93,6 +93,10 @@
 
 // Overlay
 @overlay-panel-color: @text-body;
+
+// Code
+@base-pre-background:                           @text-body;
+@base-pre-color:                                @brand-white;
 
 h1, h2 {
   text-transform: uppercase;
