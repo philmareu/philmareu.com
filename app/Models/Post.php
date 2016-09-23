@@ -11,7 +11,8 @@ class Post extends Model
         'slug',
         'published',
         'posted_at',
-        'body'
+        'body',
+        'header_code'
     ];
 
     protected $dates = ['posted_at'];
