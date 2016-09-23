@@ -55,6 +55,7 @@ return array(
         'medium' => 'Intervention\Image\Templates\Medium',
         'large' => 'Intervention\Image\Templates\Large',
 
+        'home-header' => 'PhilMareu\ImageFilters\HomeHeader',
         'primary-work-image' => 'PhilMareu\ImageFilters\PrimaryWorkImage',
         'work-header-logo' => 'PhilMareu\ImageFilters\WorkHeaderLogo',
         'work-slider' => 'PhilMareu\ImageFilters\WorkSlider'

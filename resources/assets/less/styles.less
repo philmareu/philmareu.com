@@ -13,7 +13,7 @@
 @base-body-line-height:                         30px;
 @base-body-color:                               @text-body;
 //
-//@base-link-color:                               #07D;
+@base-link-color:                               @links;
 //@base-link-text-decoration:                     none;
 //@base-link-hover-color:                         #059;
 //@base-link-hover-text-decoration:               underline;
@@ -76,17 +76,37 @@
 // Block
 @block-primary-background:                      white;
 
+// Overlay
+@overlay-panel-color: @text-body;
+
+.uk-overlay-panel {
+  position: relative;
+  color: @text-body;
+}
+
+header {
+  .uk-container {
+    padding: 0;
+  }
+}
+
 @media (min-width: @breakpoint-large) {
 
-  .nav-container {
-    .uk-container;
-    .uk-container-center;
-    .uk-margin-top;
+  .uk-overlay-panel {
+    position: absolute;
+    color: #eee;
   }
 
   header {
     font-size: 22px;
     line-height: 35px;
+    p {
+      font-weight: 400;
+    }
+
+    .uk-container {
+      padding: 0 35px;
+    }
   }
 
 }
