@@ -19,7 +19,7 @@
     <div class="uk-block uk-block-default uk-margin-top-remove">
         <div class="uk-container uk-container-center uk-margin-bottom">
             <h2 id="work">Web applications I designed and developed from scratch</h2>
-            @each('work.application', $works, 'work')
+            @each('work.application', $works->applications(), 'work')
         </div>
     </div>
     <a href="{{ url('blog') }}" class="uk-button uk-button-large uk-align-center uk-width-medium-1-1 uk-margin-bottom-remove">View code and more on Github <i class="uk-icon-external-link"></i></a>
@@ -27,7 +27,7 @@
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-container-center uk-margin-bottom">
             <h2 id="work">Some of my favorite websites I designed and developed from scratch</h2>
-            @each('work.website', $works, 'work')
+            @each('work.website', $works->websites(), 'work')
         </div>
     </div>
     <a href="https://philsquare.com"
