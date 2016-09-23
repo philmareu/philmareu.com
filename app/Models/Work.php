@@ -18,9 +18,9 @@ class Work extends Model
         'description',
         'primary_image',
         'logo',
-        'images',
         'url',
-        'ordinal'
+        'ordinal',
+        'type'
     ];
 
     public function primaryImage()
