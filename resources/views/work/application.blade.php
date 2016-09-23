@@ -5,6 +5,6 @@
         <a href="{{ url('work/' . $work->slug) }}" class="uk-button uk-button-primary uk-width-medium-1-4">Learn More</a>
     </div>
     <div class="uk-width-medium-1-3">
-        <img src="{{ asset('images/primary-work-image/' . $work->primaryImage->filename) }}" alt="{{ $work->primaryImage->alt }}">
+        <img src="{{ asset('images/primary-work-image/' . $work->primaryImage->filename) }}" alt="{{ $work->primaryImage->alt }}" class="uk-border-circle">
     </div>
 </div>
