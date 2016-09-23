@@ -13,7 +13,7 @@
 @base-body-line-height:                         30px;
 @base-body-color:                               @text-body;
 //
-//@base-link-color:                               #07D;
+@base-link-color:                               @links;
 //@base-link-text-decoration:                     none;
 //@base-link-hover-color:                         #059;
 //@base-link-hover-text-decoration:               underline;
@@ -39,8 +39,8 @@
 //@base-h1-line-height:                           42px;
 //@base-h2-font-size:                             24px;
 //@base-h2-line-height:                           30px;
-//@base-h3-font-size:                             18px;
-//@base-h3-line-height:                           24px;
+@base-h3-font-size:                             21px;
+@base-h3-line-height:                           24px;
 //@base-h4-font-size:                             16px;
 //@base-h4-line-height:                           22px;
 //@base-h5-font-size:                             14px;
@@ -70,23 +70,68 @@
 @navbar-nav-hover-background:                   transparent;
 @navbar-nav-hover-color:                        @text-header;
 
+// Buttons
+@button-background:                             #473F31;
+@button-color:                                  @brand-white;
+@button-hover-background:                       lighten(#473F31, 20%);
+@button-hover-color:                            lighten(@brand-white, 20%);
+@button-active-background:                      @brand-white;
+@button-active-color:                           #473F31;
+
+@button-primary-background:                     @links;
+@button-primary-color:                          @brand-white;
+@button-primary-hover-background:               darken(@links, 20%);
+@button-primary-hover-color:                    lighten(@brand-white, 20%);
+@button-primary-active-background:              @links;
+@button-primary-active-color:                   @brand-white;
+
 // Icon
 @icon-font-path:                                "../../fonts";
 
 // Block
 @block-primary-background:                      white;
 
+// Overlay
+@overlay-panel-color: @text-body;
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2 {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 10px solid fade(@text-body, 10%);
+}
+
+.uk-overlay-panel {
+  position: relative;
+  color: @text-body;
+}
+
+header {
+  .uk-container {
+    padding: 0;
+  }
+}
+
 @media (min-width: @breakpoint-large) {
 
-  .nav-container {
-    .uk-container;
-    .uk-container-center;
-    .uk-margin-top;
+  .uk-overlay-panel {
+    position: absolute;
+    color: #eee;
   }
 
   header {
     font-size: 22px;
     line-height: 35px;
+    p {
+      font-weight: 400;
+    }
+
+    .uk-container {
+      padding: 0 35px;
+    }
   }
 
 }

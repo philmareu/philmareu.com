@@ -1,6 +1,6 @@
-<h2 id="contact">Contact Me</h2>
+<h2 id="contact">Hire Me</h2>
 <div class="uk-alert">
-    <p>Currently, I am looking for remote contracting opportunities. Please feel free to contact me by phone, email, or the form below. Thanks!</p>
+    <p>Currently, I am looking for part-time remote contracting opportunities. Please feel free to contact me by phone, email, or the form below. Thanks!</p>
 </div>
 
 <div class="uk-grid uk-grid-collapse uk-grid-divider uk-text-center uk-margin-bottom">
@@ -40,7 +40,7 @@
 
     <div class="uk-form-row">
         <div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-4">
-            <input type="submit" name="submit" value="Send" class="uk-button uk-width-1-1">
+            <input type="submit" name="submit" value="Send" class="uk-button uk-width-1-1 uk-text-contrast">
         </div>
     </div>
 </form>
