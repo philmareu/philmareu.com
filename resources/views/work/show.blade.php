@@ -1,13 +1,14 @@
 @extends('layouts.default')
 
 @section('header-text')
-    <img src="{{ url('images/work-header-logo/' . $work->logoImage->filename) }}" alt="{{ $work->logoImage->alt }}">
+    @include('partials.work.header')
 @endsection
 
 @section('content')
 
-    <div class="uk-block uk-block-muted uk-block-large">
+    <div class="uk-block uk-block-muted">
         <div class="uk-container uk-container-center">
+            <h2>About</h2>
             <div class="uk-grid">
                 <div class="uk-width-medium-1-2">
                     <div data-uk-slideset="{default: 1, medium: 1, large: 1}">
@@ -22,10 +23,7 @@
                     </div>
                 </div>
                 <div class="uk-width-medium-1-2">
-                    <h1>{{ $work->title }}</h1>
-
                     {!! $work->description !!}
-
                     @if($work->url != "")
                         <p>
                             <a href="{{ $work->url }}" class="uk-button uk-button-large uk-button-primary">Check it out</a>
