@@ -9,12 +9,8 @@
 
 @include('partials.navigation')
 
-<header class="uk-block uk-block-primary">
-    <div class="uk-text-center uk-container uk-container-center">
-        <h1>
-            @yield('header-text')
-        </h1>
-    </div>
+<header>
+    @yield('header-text')
 </header>
 
 <div id="content">
