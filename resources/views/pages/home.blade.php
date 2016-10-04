@@ -34,11 +34,11 @@
 
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-container-center uk-margin-bottom">
-            <h2 id="work">Some of my favorite websites I designed and developed from scratch</h2>
+            <h2 id="work">Basic websites I built on Laravel and implements LaraManager</h2>
             @each('work.website', $works->websites(), 'work')
         </div>
     </div>
-    <a href="https://philsquare.com"
+    <a href="https://philsquare.com/portfolio"
        class="uk-button uk-button-large uk-align-center uk-width-medium-1-1 uk-margin-bottom-remove"
        target="_blank">More websites on philsquare.com <i class="uk-icon-external-link"></i></a>
 
