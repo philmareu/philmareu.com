@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('title')
+    {{ $work->title }}
+@endsection
+
 @section('header-text')
     @include('partials.work.header')
 @endsection

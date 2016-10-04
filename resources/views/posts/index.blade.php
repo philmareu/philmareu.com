@@ -5,7 +5,14 @@
 @endsection
 
 @section('header-text')
-    Blog
+    <figure class="uk-overlay">
+        <img src="{{ asset('img/header-blog.jpg') }}" alt="Blog header image" class="uk-hidden-small">
+        <figcaption class="uk-overlay-panel uk-flex uk-flex-middle">
+            <div class="uk-container uk-container-center">
+                <h1>Blog</h1>
+            </div>
+        </figcaption>
+    </figure>
 @endsection
 
 @section('content')
