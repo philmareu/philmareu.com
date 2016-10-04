@@ -4,6 +4,10 @@
     {{ $page->title }}
 @endsection
 
+@section('meta')
+    <meta name="description" content="{{ $page->description }}">
+@endsection
+
 @section('header-text')
     {{ $page->title }}
 @endsection

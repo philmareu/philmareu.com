@@ -4,6 +4,10 @@
     About
 @endsection
 
+@section('meta')
+    <meta name="description" content="{{ $page->description }}">
+@endsection
+
 @section('header-text')
     <figure class="uk-overlay">
         <img src="{{ asset('img/header-about.jpg') }}" alt="Blog header image" class="uk-hidden-small">

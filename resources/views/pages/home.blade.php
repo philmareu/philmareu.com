@@ -4,6 +4,10 @@
     Home
 @endsection
 
+@section('meta')
+    <meta name="description" content="{{ $page->description }}">
+@endsection
+
 @section('content')
 
     <div class="uk-block uk-block-muted">
