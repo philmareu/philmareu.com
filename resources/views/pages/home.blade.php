@@ -4,6 +4,10 @@
     Home
 @endsection
 
+@section('meta')
+    <meta name="description" content="{{ $page->description }}">
+@endsection
+
 @section('content')
 
     <div class="uk-block uk-block-muted">
@@ -18,11 +22,15 @@
 
     <div class="uk-block uk-block-default uk-margin-top-remove">
         <div class="uk-container uk-container-center uk-margin-bottom">
-            <h2 id="work">Web applications I designed and developed from scratch</h2>
+            <h2 id="work">Active personal web application projects</h2>
             @each('work.application', $works->applications(), 'work')
         </div>
     </div>
-    <a href="{{ url('blog') }}" class="uk-button uk-button-large uk-align-center uk-width-medium-1-1 uk-margin-bottom-remove">View code and more on Github <i class="uk-icon-external-link"></i></a>
+
+    <a href="http://github.com/philmareu"
+       class="uk-button uk-button-large uk-align-center uk-width-medium-1-1 uk-margin-bottom-remove"
+            target="_blank">Want to see code? Check out my work on Github <i class="uk-icon-external-link"></i></a>
+
 
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-container-center uk-margin-bottom">

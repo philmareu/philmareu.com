@@ -4,9 +4,20 @@
     About
 @endsection
 
+@section('meta')
+    <meta name="description" content="{{ $page->description }}">
+@endsection
+
 @section('header-text')
-    <img src="{{ asset('img/pic.png') }}" alt="Phil Mareu Logo" width="100" class="uk-border-circle uk-display-block uk-container-center uk-margin-bottom">
-    About Phil Mareu
+    <figure class="uk-overlay">
+        <img src="{{ asset('img/header-about.jpg') }}" alt="Blog header image" class="uk-hidden-small">
+        <figcaption class="uk-overlay-panel uk-flex uk-flex-middle">
+            <div class="uk-container uk-container-center">
+                <h1>About Phil Mareu</h1>
+                <p>{{ $page->description }}</p>
+            </div>
+        </figcaption>
+    </figure>
 @endsection
 
 @section('content')

@@ -4,18 +4,27 @@
     {{ $post->title }}
 @endsection
 
+@section('meta')
+    <meta name="description" content="{!! $post->summary !!}">
+@endsection
+
 @section('header-text')
-    {{ $post->title }}
+    <figure class="uk-overlay">
+        <img src="{{ asset('img/header-blog.jpg') }}" alt="Blog header image" class="uk-hidden-small">
+        <figcaption class="uk-overlay-panel uk-flex uk-flex-middle">
+            <div class="uk-container uk-container-center">
+                <h1>{{ $post->title }}</h1>
+                <p>Posted on {{ $post->posted_at->format('M jS, Y') }}</p>
+            </div>
+        </figcaption>
+    </figure>
 @endsection
 
 @section('content')
 
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-width-medium-1-2 uk-container-center">
-            <div class="meta uk-text-muted">Posted on {{ $post->posted_at->format('M jS, Y') }}</div>
-
             <div id="post">{!! $post->body !!}</div>
-
             <div id="disqus_thread"></div>
         </div>
     </div>

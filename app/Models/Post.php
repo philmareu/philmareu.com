@@ -12,7 +12,8 @@ class Post extends Model
         'published',
         'posted_at',
         'body',
-        'header_code'
+        'header_code',
+        'summary'
     ];
 
     protected $dates = ['posted_at'];

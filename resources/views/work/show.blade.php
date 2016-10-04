@@ -1,5 +1,13 @@
 @extends('layouts.default')
 
+@section('title')
+    {{ $work->title }}
+@endsection
+
+@section('meta')
+    <meta name="description" content="{{ $work->summary }}">
+@endsection
+
 @section('header-text')
     @include('partials.work.header')
 @endsection

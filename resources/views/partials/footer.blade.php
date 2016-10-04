@@ -3,7 +3,7 @@
         <h2 id="contact">Hire Me</h2>
         <div class="uk-grid">
             <div class="uk-width-medium-1-2">
-                <p>Currently, I am looking for part-time remote contracting opportunities. Please feel free to contact me by phone, email, or with the contact form. Thanks!</p>
+                <p>Currently, I am looking for part-time remote contracting opportunities. More specifically, I'm interested in application development and contributing on Laravel 5.x projects. Please feel free to contact me by phone, email, or with the contact form. Thanks!</p>
                 <div class="uk-grid uk-grid-collapse uk-grid-divider uk-text-center uk-margin-bottom">
                     <div class="uk-width-medium-1-2">
                         <span class="phone-number"><i class="uk-icon-phone"></i> 785-813-1799</span>
