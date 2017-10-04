@@ -39,4 +39,9 @@ class PostRepository {
             ->whereSlug($slug)
             ->first();
     }
+
+    public function getPreview($id)
+    {
+        return $this->post->find($id);
+    }
 }

@@ -43,4 +43,10 @@ class PostsController extends Controller
         return view('posts.show')
             ->with('post', $post);
     }
+
+    public function preview($id)
+    {
+        return view('posts.show')
+            ->with('post', $this->postRepository->getPreview($id));
+    }
 }
