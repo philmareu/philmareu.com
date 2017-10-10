@@ -39,21 +39,21 @@
 
         post.html(marked( html ));
 
-//        // Let marked do its normal token generation.
-//        tokens = marked.lexer( html );
-//
-//        // Mark all code blocks as already being escaped.
-//        // This prevents the parser from encoding anything inside code blocks
-//        tokens.forEach(function( token ) {
-//            if ( token.type === "code" ) {
-//                token.escaped = true;
-//            }
-//        });
-//
-//        // Let marked do its normal parsing, but without encoding the code blocks
-//        parsed = marked.parser( tokens );
-//
-//        post.html(parsed);
+        // Let marked do its normal token generation.
+        tokens = marked.lexer( html );
+
+        // Mark all code blocks as already being escaped.
+        // This prevents the parser from encoding anything inside code blocks
+        tokens.forEach(function( token ) {
+            if ( token.type === "code" ) {
+                token.escaped = true;
+            }
+        });
+
+        // Let marked do its normal parsing, but without encoding the code blocks
+        parsed = marked.parser( tokens );
+
+        post.html(parsed);
 
         var url = '{{ url('blog/' . $post->posted_at->format('Y/m/d') . '/' . $post->slug) }}';
         var id = 'post-' + '{{ $post->id }}';
