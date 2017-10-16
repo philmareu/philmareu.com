@@ -18,8 +18,9 @@ elixir(function(mix) {
             'vendor/uikit-2.25.0/uikit.js',
             'vendor/uikit-2.25.0/components/slideset.js',
             'vendor/uikit-2.25.0/components/lightbox.js',
-            'vendor/marked.js',
-            'scripts.js',
+            // 'vendor/marked.js',
+            '../../../node_modules/markdown-it/dist/markdown-it.js',
+            'scripts.js'
         ], 'public/js/scripts.js')
         .version(['public/css/styles.css', 'public/js/scripts.js'])
 });
