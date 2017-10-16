@@ -22,6 +22,8 @@
 
 @section('content')
 
+
+
     <div class="uk-block uk-block-muted">
         <div class="uk-container uk-width-medium-1-2 uk-container-center">
             <div id="post">{!! $post->body !!}</div>
@@ -33,27 +35,35 @@
 
 @section('scripts')
     <script>
+        md = new markdownit('commonmark');
 
-        var post = $('#post');
-        var html = post.html();
+        var html = md.render(document.getElementById('post').innerHTML);
+        var adj = html.replace(/&amp;gt;/g, '>');
+        console.log(adj);
+        document.getElementById('post').innerHTML = adj;
 
-        post.html(marked( html ));
 
+//        marked.setOptions({
+//            highlight: function (code) {
+//                return require('highlight.js').highlightAuto(code).value;
+//            }
+//        });
+//
         // Let marked do its normal token generation.
-        tokens = marked.lexer( html );
-
-        // Mark all code blocks as already being escaped.
-        // This prevents the parser from encoding anything inside code blocks
-        tokens.forEach(function( token ) {
-            if ( token.type === "code" ) {
-                token.escaped = true;
-            }
-        });
-
-        // Let marked do its normal parsing, but without encoding the code blocks
-        parsed = marked.parser( tokens );
-
-        post.html(parsed);
+//        tokens = marked.lexer( html );
+//
+//        // Mark all code blocks as already being escaped.
+//        // This prevents the parser from encoding anything inside code blocks
+//        tokens.forEach(function( token ) {
+//            if ( token.type === "code" ) {
+//                token.escaped = true;
+//            }
+//        });
+//
+//        // Let marked do its normal parsing, but without encoding the code blocks
+//        parsed = marked.parser( tokens );
+//
+//        document.getElementById('post').innerHTML = parsed;
 
         var url = '{{ url('blog/' . $post->posted_at->format('Y/m/d') . '/' . $post->slug) }}';
         var id = 'post-' + '{{ $post->id }}';
