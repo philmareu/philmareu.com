@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: PhilMareu
-        psr4_prefix: PhilMareu
-        src_path: app
