@@ -10,4 +10,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam
 
 @section('content')
     @include('partials.headers.default')
+
+    <div class="uk-container">
+        <div class="uk-child-width-1-2@s" uk-grid>
+            @each('partials.cards.project', [[], [], []], 'project')
+        </div>
+    </div>
 @endsection
