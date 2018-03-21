@@ -1,7 +1,7 @@
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li><a href=""><span uk-icon="icon: star; ratio: 1.5;" class="uk-margin-small-right"></span>Phil Mareu</a></li>
+            <li><a href="{{ url('/') }}"><span uk-icon="icon: star; ratio: 1.5;" class="uk-margin-small-right"></span>Phil Mareu</a></li>
         </ul>
     </div>
 
@@ -18,7 +18,7 @@
 
     <div class="uk-navbar-right">
         <div class="uk-navbar-item">
-            <a href="" class="uk-button uk-button-primary uk-button-small">Hire Me</a>
+            <a href="{{ url('hire') }}" class="uk-button uk-button-primary uk-button-small">Hire Me</a>
         </div>
     </div>
 </nav>
