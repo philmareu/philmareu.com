@@ -6,7 +6,7 @@
             <div class="uk-overlay uk-position-top uk-light">
                 <h1>Automated Order Management</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aut beatae cumque dolorum ea ex excepturi nemo officiis pariatur recusandae, repellat repellendus repudiandae, saepe sunt, tenetur totam veniam voluptates!</p>
-                <a href="" class="uk-button uk-button-default uk-button-small">Learn More</a>
+                <a href="{{ url('work/work') }}" class="uk-button uk-button-default uk-button-small">Learn More</a>
             </div>
         </div>
     </div>
