@@ -12,7 +12,7 @@
     @include('partials.headers.default')
 
     <div class="uk-container">
-        <div class="uk-child-width-1-2@s" uk-grid>
+        <div class="uk-child-width-1-3@s" uk-grid>
             @each('partials.articles.list.card', [[], [], []], 'article')
         </div>
     </div>
