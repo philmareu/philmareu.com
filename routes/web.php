@@ -2,6 +2,7 @@
 
 Route::view('/', 'welcome');
 Route::view('projects', 'projects.index');
+Route::view('projects/project', 'projects.show');
 Route::view('screencasts', 'screencasts.index');
 Route::view('work', 'work.index');
 Route::view('posts', 'posts.index');

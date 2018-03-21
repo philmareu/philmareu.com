@@ -9,7 +9,7 @@
                 <h3 class="uk-card-title">LaraManager</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 <div>
-                    <a href="" class="uk-button uk-button-default uk-button-small">Details</a>
+                    <a href="{{ url('projects/project') }}" class="uk-button uk-button-default uk-button-small">Details</a>
                 </div>
             </div>
         </div>
