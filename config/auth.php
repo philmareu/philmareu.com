@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => PhilMareu\User::class,
+            'model' => PhilMareu\Models\User::class,
         ],
 
         // 'users' => [

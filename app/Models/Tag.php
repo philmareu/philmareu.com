@@ -1,6 +1,6 @@
 <?php
 
-namespace PhilMareu;
+namespace PhilMareu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
