@@ -9,6 +9,6 @@ class Project extends Model
 {
     public function image()
     {
-        return $this->belongsTo(LaramanagerImage::class);
+        return $this->belongsTo(LaramanagerImage::class, 'laramanager_image_id');
     }
 }
