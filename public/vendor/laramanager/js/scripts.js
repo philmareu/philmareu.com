@@ -1,7 +1,7 @@
 
 window._ = require('lodash');
 
-window.SITE_URL = document.head.querySelector('meta[name="site-url"]');
+window.SITE_URL = document.head.querySelector('meta[name="site-url"]').content;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -43,6 +43,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
+    window.token = token.content;
+
     // window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
