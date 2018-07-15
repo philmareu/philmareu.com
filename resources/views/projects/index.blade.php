@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam
 
     <div class="uk-container">
         <div class="uk-child-width-1-2@s" uk-grid>
-            @each('partials.cards.project', [[], [], []], 'project')
+            @each('partials.cards.project', $projects, 'project')
         </div>
     </div>
 

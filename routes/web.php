@@ -1,7 +1,7 @@
 <?php
 
 Route::view('/', 'welcome');
-Route::view('projects', 'projects.index');
+Route::resource('projects', 'ProjectsController')->only(['index', 'show']);
 Route::view('projects/project', 'projects.show');
 Route::view('screencasts', 'screencasts.index');
 Route::view('screencasts/screencast', 'screencasts.show');
