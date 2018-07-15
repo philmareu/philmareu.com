@@ -9,7 +9,6 @@
         <ul class="uk-navbar-nav">
             <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="{{ url('projects') }}">Projects</a></li>
-            <li><a href="{{ url('screencasts') }}">Screencasts</a></li>
             <li><a href="{{ url('posts') }}">Posts</a></li>
             <li><a href="{{ url('work') }}">Work</a></li>
             <li><a href="{{ url('about') }}">About</a></li>
