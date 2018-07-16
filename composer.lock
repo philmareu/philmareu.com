@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3278f6c2cf1c90b2c588a1afb22852cd",
+    "content-hash": "5537b8729ff79320bf90e4523c426f85",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1570,17 +1570,65 @@
             "time": "2017-09-27T21:40:39+00:00"
         },
         {
-            "name": "philsquare/laramanager",
-            "version": "1.2.6",
+            "name": "philmareu/laramanager-blog",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/philsquare/LaraManager.git",
-                "reference": "6d39343626e0d13f17b4a60c82f1c152f511a0f2"
+                "url": "https://github.com/philmareu/LaraManagerBlog.git",
+                "reference": "3a2b1ee825c46ba84cb3e6c4a952a34e9be58cfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philsquare/LaraManager/zipball/6d39343626e0d13f17b4a60c82f1c152f511a0f2",
-                "reference": "6d39343626e0d13f17b4a60c82f1c152f511a0f2",
+                "url": "https://api.github.com/repos/philmareu/LaraManagerBlog/zipball/3a2b1ee825c46ba84cb3e6c4a952a34e9be58cfe",
+                "reference": "3a2b1ee825c46ba84cb3e6c4a952a34e9be58cfe",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PhilMareu\\LaraManagerBlog\\LaraManagerBlogServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhilMareu\\LaraManagerBlog\\": "src/PhilMareu/LaraManagerBlog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Mareu",
+                    "email": "philmareu@gmail.com",
+                    "homepage": "https://philmareu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Blog addition for LaraManager",
+            "homepage": "https://github.com/philmareu/LaraManagerBlog",
+            "keywords": [
+                "admin",
+                "blog",
+                "laravel"
+            ],
+            "time": "2018-07-16T20:10:33+00:00"
+        },
+        {
+            "name": "philsquare/laramanager",
+            "version": "1.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philsquare/LaraManager.git",
+                "reference": "3122b22ae00432f344e466e8354f90393b0bbc80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philsquare/LaraManager/zipball/3122b22ae00432f344e466e8354f90393b0bbc80",
+                "reference": "3122b22ae00432f344e466e8354f90393b0bbc80",
                 "shasum": ""
             },
             "require": {
@@ -1588,6 +1636,12 @@
                 "intervention/image": "~2.2",
                 "intervention/imagecache": "~2.3",
                 "suin/php-rss-writer": "^1.4"
+            },
+            "require-dev": {
+                "filp/whoops": "~2.0",
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~6.0"
             },
             "type": "library",
             "extra": {
@@ -1619,7 +1673,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-07-09T21:13:11+00:00"
+            "time": "2018-07-15T18:44:55+00:00"
         },
         {
             "name": "psr/container",
