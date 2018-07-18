@@ -8,7 +8,7 @@
     <div class="uk-navbar-center">
         <ul class="uk-navbar-nav">
             <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ url('posts') }}">Posts</a></li>
+            <li><a href="{{ url('blog') }}">Posts</a></li>
             <li><a href="{{ url('about') }}">About</a></li>
         </ul>
     </div>
