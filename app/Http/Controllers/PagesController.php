@@ -11,4 +11,9 @@ class PagesController extends Controller
     {
         return view('home.index')->with('posts', $postsRepository->getRecent());
     }
+
+    public function about()
+    {
+        return view('about.index');
+    }
 }
