@@ -1,17 +1,14 @@
 <article class="uk-article">
 
-    <h3><a class="uk-link-reset" href="">Updating a model using polymorphic properties</a></h3>
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="{{ url('blog/' . $post->published_at->format('Y/m/d/') . $post->slug) }}">{{ $post->title }}</a></h1>
 
-    <p class="uk-article-meta">Written by <a href="#">Phil</a> on 12 April 2012. Posted in <a href="#">Laravel</a></p>
+    <p class="uk-article-meta">{{ $post->published_at->format('F dS, Y') }}</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="uk-text-lead">{{ $post->summary }}</p>
 
     <div class="uk-grid-small uk-child-width-auto" uk-grid>
         <div>
-            <a class="uk-button uk-button-text" href="#">Read more</a>
-        </div>
-        <div>
-            <a class="uk-button uk-button-text" href="#">5 Comments</a>
+            <a class="uk-button uk-button-text" href="{{ url('blog/' . $post->published_at->format('Y/m/d/') . $post->slug) }}">Read more</a>
         </div>
     </div>
 
