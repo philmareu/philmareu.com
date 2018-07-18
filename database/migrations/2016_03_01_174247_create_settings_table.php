@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Philsquare\LaraManager\Models\LaramanagerSetting;
 
 class CreateSettingsTable extends Migration
 {
@@ -12,35 +13,16 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('laramanager_settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->text('slug');
             $table->text('description');
             $table->enum('type', ['text', 'textarea']);
             $table->text('value');
-            $table->boolean('is_core');
+            $table->boolean('is_core')->default(0);
             $table->timestamps();
         });
-
-        DB::table('settings')->insert([
-            [
-                'title' => 'Site Name',
-                'slug' => 'site-name',
-                'description' => 'The name of the website',
-                'type' => 'text',
-                'value' => 'Admin',
-                'is_core' => 1
-            ],
-            [
-                'title' => 'Integration Code',
-                'slug' => 'integration-code',
-                'description' => 'This code will be injected on every page.',
-                'type' => 'textarea',
-                'value' => '',
-                'is_core' => 1
-            ]
-        ]);
     }
 
     /**
@@ -50,6 +32,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('settings');
+        Schema::dropIfExists('laramanager_settings');
     }
 }
