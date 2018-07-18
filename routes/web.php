@@ -1,6 +1,6 @@
 <?php
 
-Route::view('/', 'welcome');
+Route::get('/', 'PagesController@home');
 Route::resource('projects', 'ProjectsController')->only(['index', 'show']);
 Route::view('projects/project', 'projects.show');
 Route::view('work', 'work.index');
