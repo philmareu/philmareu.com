@@ -21,6 +21,8 @@
 
     <div class="uk-container">
         @each('partials.articles.list.basic', $posts, 'post')
+
+        {!! $posts->render() !!}
     </div>
 
     {{--<div id="offcanvas-tags" uk-offcanvas="flip: true;">--}}
@@ -37,3 +39,9 @@
         {{--</div>--}}
     {{--</div>--}}
 @endsection
+
+@push('scripts-last')
+    <script>
+        $('.pagination').attr('class', 'uk-pagination');
+    </script>
+@endpush
