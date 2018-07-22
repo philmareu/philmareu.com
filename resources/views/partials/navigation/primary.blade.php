@@ -1,7 +1,7 @@
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li><a href="{{ url('/') }}">Phil Mareu</a></li>
+            <li><a href="{{ url('/') }}"><span uk-icon="icon: philmareu; ratio: .05;" class="uk-margin-small-right"></span>Phil Mareu</a></li>
         </ul>
     </div>
 
