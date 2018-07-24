@@ -29,14 +29,13 @@
             </div>
             <div>
                 <h2>Screenshots</h2>
-                <div class="uk-child-width-1-2@s" uk-grid>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
+
+                <div class="uk-child-width-1-2@s" uk-grid uk-lightbox="animation: slide">
+                    @foreach($project->screenshots as $screenshot)
+                        <a class="uk-inline" href="{{ url('images/original/' . $screenshot->filename) }}" data-caption="{{ $screenshot->alt }}">
+                            <img src="{{ url('images/original/' . $screenshot->filename) }}" alt="{{ $screenshot->alt }}">
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>
