@@ -22,7 +22,7 @@ class ProjectsController extends Controller
     public function index()
     {
         return view('projects.index')
-            ->withProjects($this->project->with('image')->get());
+            ->withProjects($this->project->with('image', 'posts')->get());
     }
 
     /**
@@ -34,6 +34,6 @@ class ProjectsController extends Controller
     public function show(Project $project)
     {
         return view('projects.show')
-            ->withProject($project);
+            ->withProject($project->load('screenshots'));
     }
 }

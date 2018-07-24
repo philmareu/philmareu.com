@@ -3,5 +3,9 @@
 @section('content')
     @include('partials.headers.default')
 
-    @yield('default-content')
+    <div class="uk-margin-large-bottom">
+        @yield('default-content')
+    </div>
+
+    @include('layout.footers.default')
 @endsection

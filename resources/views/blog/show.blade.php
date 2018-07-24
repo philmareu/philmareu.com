@@ -19,3 +19,7 @@
         </article>
     </div>
 @endsection
+
+@push('scripts-last')
+    <script>hljs.initHighlightingOnLoad();</script>
+@endpush

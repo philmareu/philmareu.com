@@ -1,51 +1,41 @@
-@extends('laramanager::layouts.sub.default')
+@extends('layout.layouts.default')
 
 @section('title')
-    Project
+    {{ $project->title }}
 @endsection
 
 @section('description')
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam cum cumque delectus est fugit in, incidunt minus natus nemo non optio quae reiciendis sapiente, tempore totam vero voluptatum.
+    {{ $project->description }}
 @endsection
 
 @section('actions')
     <div class="uk-text-center">
-        <a href="" class="uk-button uk-button-default">Website</a>
-        <a href="" class="uk-button uk-button-default">Github</a>
+        @if($project->website)
+            <a href="{{ $project->website }}" class="uk-button uk-button-default">Website</a>
+        @endif
+
+        @if($project->github)
+            <a href="{{ $project->github }}" class="uk-button uk-button-default">Github</a>
+        @endif
     </div>
 @endsection
 
-@section('content')
-    @include('partials.headers.default')
-
+@section('default-content')
     <div class="uk-container">
-        <div class="uk-grid-divider" uk-grid>
-            <div class="uk-width-2-3@s">
-                <div class="uk-child-width-1-2@s" uk-grid>
-                    @include('partials.cards.screencast')
-                    @include('partials.articles.list.card')
-                </div>
+        <div class="uk-child-width-1-2@s uk-grid-divider" uk-grid>
+            <div>
+                <h2>Posts</h2>
+                @each('blog.list.basic', $project->posts, 'post')
             </div>
-            <div class="uk-width-1-3@s">
-                <div uk-margin>
-                    <span class="uk-badge">Laravel/PHP</span>
-                    <span class="uk-badge">Mapbox</span>
-                    <span class="uk-badge">Stripe</span>
-                    <span class="uk-badge">Darksky API</span>
-                    <span class="uk-badge">Laravel/PHP</span>
-                    <span class="uk-badge">Laravel/PHP</span>
-                    <span class="uk-badge">Laravel/PHP</span>
-                    <span class="uk-badge">Laravel/PHP</span>
-                </div>
-                <hr>
-                <div class="uk-child-width-1-2@s" uk-grid>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
-                    <div><img src="https://picsum.photos/300" alt=""></div>
+            <div>
+                <h2>Screenshots</h2>
+
+                <div class="uk-child-width-1-2@s" uk-grid uk-lightbox="animation: slide">
+                    @foreach($project->screenshots as $screenshot)
+                        <a class="uk-inline" href="{{ url('images/original/' . $screenshot->filename) }}" data-caption="{{ $screenshot->alt }}">
+                            <img src="{{ url('images/original/' . $screenshot->filename) }}" alt="{{ $screenshot->alt }}">
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

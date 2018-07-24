@@ -3,6 +3,8 @@
 namespace PhilMareu\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use PhilMareu\LaraManagerBlog\Repositories\PostsRepository;
+use PhilMareu\Models\Post;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton(PostsRepository::class, function ($app) {
+            return new PostsRepository(new Post);
+        });
     }
 
     /**

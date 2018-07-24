@@ -1,4 +1,4 @@
-@extends('laramanager::layouts.sub.default')
+@extends('layout.layouts.default')
 
 @section('title')
     About
@@ -8,9 +8,7 @@
 
 @endsection
 
-@section('content')
-    @include('partials.headers.default')
-
+@section('default-content')
     <div class="uk-container">
         <p>Hi, I’m Phil Mareu. I am a professional web designer and developer with almost 10 years of experience. I strive to build the best UI/UX for web applications and drive it with sensible coding practices and techniques. When I’m not building web things you can find me playing disc golf, hiking, or enjoying a tasty beverage while BBQing.</p>
 

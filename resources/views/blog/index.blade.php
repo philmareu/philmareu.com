@@ -1,7 +1,7 @@
-@extends('laramanager::layouts.sub.default')
+@extends('layout.layouts.default')
 
 @section('title')
-    Posts
+    Blog
 @endsection
 
 @section('app-classes')
@@ -9,18 +9,12 @@
 @endsection
 
 @section('description')
-    I write about development as well as design.
+
 @endsection
 
-@section('actions')
-    {{--<button type="button" class="uk-button uk-button-default" uk-toggle="target: #offcanvas-tags">Tags</button>--}}
-@endsection
-
-@section('content')
-    @include('partials.headers.default')
-
-    <div class="uk-container">
-        @each('partials.articles.list.basic', $posts, 'post')
+@section('default-content')
+    <div class="uk-container uk-container-small uk-text-center">
+        @each('blog.list.basic', $posts->load('project'), 'post')
 
         {!! $posts->render() !!}
     </div>

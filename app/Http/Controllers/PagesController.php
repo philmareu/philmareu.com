@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function home(PostsRepository $postsRepository)
     {
-        return view('home.index')->with('posts', $postsRepository->getRecent());
+        return view('home.index')->with('posts', $postsRepository->getRecent()->load('project'));
     }
 
     public function about()

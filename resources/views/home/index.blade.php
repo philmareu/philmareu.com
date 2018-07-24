@@ -10,9 +10,16 @@
 
 @section('content')
 
-    @include('partials.headers.home')
+    <div class="uk-margin-large-bottom">
+        @include('partials.headers.home')
 
-    <div class="uk-container">
-        @each('partials.articles.list.basic', $posts, 'post')
+        <div class="uk-container uk-container-small uk-text-center">
+            @each('blog.list.basic', $posts, 'post')
+
+            <a href="{{ url('blog') }}" class="uk-button uk-button-secondary uk-margin">View Blog</a>
+        </div>
     </div>
+
+    @include('layout.footers.default')
+
 @endsection
