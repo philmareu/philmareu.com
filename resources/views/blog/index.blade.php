@@ -1,4 +1,4 @@
-@extends('laramanager::layouts.sub.default')
+@extends('layout.layouts.default')
 
 @section('title')
     Posts
@@ -12,9 +12,7 @@
 
 @endsection
 
-@section('content')
-    @include('partials.headers.default')
-
+@section('default-content')
     <div class="uk-container uk-container-small uk-text-center">
         @each('blog.list.basic', $posts->load('project'), 'post')
 

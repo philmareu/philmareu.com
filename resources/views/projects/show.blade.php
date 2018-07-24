@@ -1,4 +1,4 @@
-@extends('laramanager::layouts.sub.default')
+@extends('layout.layouts.default')
 
 @section('title')
     {{ $project->title }}
@@ -20,9 +20,7 @@
     </div>
 @endsection
 
-@section('content')
-    @include('partials.headers.default')
-
+@section('default-content')
     <div class="uk-container">
         <div class="uk-child-width-1-2@s uk-grid-divider" uk-grid>
             <div>
