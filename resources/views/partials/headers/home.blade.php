@@ -1,11 +1,13 @@
-<header>
+<header class="bg-stripes">
     @include('partials.navigation.primary')
 
-    <section class="uk-section uk-section-default uk-text-center uk-margin-large-bottom">
+    <section class="uk-section uk-text-center uk-margin-bottom">
         <div class="uk-container">
-            <div class="uk-heading-hero">Coder & Designer</div>
-            <p class="uk-text-large">@yield('description')</p>
-            <div class="uk-text-center">
+            <img src="{{ url('images/original/photo-of-phil-mareu.jpg') }}" alt="Photo of Phil Mareu" class="uk-border-circle uk-width-1-6 uk-margin-bottom">
+            <div class="uk-text-large uk-text-bold">Hi, I'm Phil Mareu</div>
+            <div class="uk-text-large">Freelance Developer & Designer</div>
+            <div class="uk-width-1-3 uk-container">
+                <p>@yield('description')</p>
                 <a href="http://github.com/philmareu"><span uk-icon="icon: github;" class="uk-margin-small-right"></span></a>
                 <a href="http://twitter.com/philmareu"><span uk-icon="icon: twitter;" class="uk-margin-small-right"></span></a>
                 <a href="http://dribbble.com/philmareu"><span uk-icon="icon: dribbble;" class="uk-margin-small-right"></span></a>
@@ -17,5 +19,3 @@
     </section>
 
 </header>
-
-<hr>
