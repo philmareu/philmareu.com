@@ -12,20 +12,11 @@
     I write about development as well as design.
 @endsection
 
-@section('actions')
-    {{--<button type="button" class="uk-button uk-button-default" uk-toggle="target: #offcanvas-tags">Tags</button>--}}
-@endsection
-
 @section('content')
     @include('partials.headers.default')
 
-    <ul class="uk-tab">
-        <li class="uk-active"><a href="#"><span uk-icon="icon: list"></span> List</a></li>
-        <li><a href="{{ url('blog-series') }}"><span uk-icon="icon: grid"></span> Series</a></li>
-    </ul>
-
     <div class="uk-container">
-        @each('partials.articles.list.basic', $posts, 'post')
+        @each('blog.list.basic', $posts->load('project'), 'post')
 
         {!! $posts->render() !!}
     </div>

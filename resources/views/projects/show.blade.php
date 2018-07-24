@@ -23,7 +23,7 @@
             <div class="uk-width-2-3@s">
                 <div class="uk-child-width-1-2@s" uk-grid>
                     @include('partials.cards.screencast')
-                    @include('partials.articles.list.card')
+                    @include('blog.list.card')
                 </div>
             </div>
             <div class="uk-width-1-3@s">
