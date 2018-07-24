@@ -19,6 +19,11 @@
 @section('content')
     @include('partials.headers.default')
 
+    <ul class="uk-tab">
+        <li class="uk-active"><a href="#"><span uk-icon="icon: list"></span> List</a></li>
+        <li><a href="{{ url('blog-series') }}"><span uk-icon="icon: grid"></span> Series</a></li>
+    </ul>
+
     <div class="uk-container">
         @each('partials.articles.list.basic', $posts, 'post')
 
