@@ -16,7 +16,7 @@
         <div class="uk-container uk-container-small uk-text-center">
             @each('blog.list.basic', $posts, 'post')
 
-            <a href="{{ url('blog') }}" class="uk-button uk-button-secondary uk-margin">View more posts</a>
+            <a href="{{ url('blog') }}" class="uk-button uk-button-secondary uk-margin">View Blog</a>
         </div>
     </div>
 

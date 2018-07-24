@@ -1,7 +1,7 @@
 @extends('layout.layouts.default')
 
 @section('title')
-    Posts
+    Blog
 @endsection
 
 @section('app-classes')
