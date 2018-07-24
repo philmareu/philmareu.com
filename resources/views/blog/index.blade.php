@@ -9,13 +9,13 @@
 @endsection
 
 @section('description')
-    I write about development as well as design.
+
 @endsection
 
 @section('content')
     @include('partials.headers.default')
 
-    <div class="uk-container">
+    <div class="uk-container uk-container-small uk-text-center">
         @each('blog.list.basic', $posts->load('project'), 'post')
 
         {!! $posts->render() !!}

@@ -5,11 +5,11 @@ Projects
 @endsection
 
 @section('description')
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam cum cumque delectus est fugit in, incidunt minus natus nemo non optio quae reiciendis sapiente, tempore totam vero voluptatum.
+
 @endsection
 
 @section('actions')
-    <button type="button" class="uk-button uk-button-default" uk-toggle="target: #offcanvas-tags">Tags</button>
+    {{--<button type="button" class="uk-button uk-button-default" uk-toggle="target: #offcanvas-tags">Tags</button>--}}
 @endsection
 
 @section('content')
