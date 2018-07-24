@@ -12,7 +12,7 @@
 
     @include('partials.headers.home')
 
-    <div class="uk-container">
+    <div class="uk-container uk-container-small uk-text-center">
         @each('blog.list.basic', $posts, 'post')
     </div>
 @endsection

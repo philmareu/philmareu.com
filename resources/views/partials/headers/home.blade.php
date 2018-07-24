@@ -1,7 +1,7 @@
 <header class="bg-stripes">
     @include('partials.navigation.primary')
 
-    <section class="uk-section uk-text-center uk-margin-bottom">
+    <section class="uk-section uk-text-center uk-margin-large-bottom">
         <div class="uk-container">
             <img src="{{ url('images/original/photo-of-phil-mareu.jpg') }}" alt="Photo of Phil Mareu" class="uk-border-circle uk-width-1-6 uk-margin-bottom">
             <div class="uk-text-large uk-text-bold">Hi, I'm Phil Mareu</div>
@@ -17,5 +17,4 @@
             </div>
         </div>
     </section>
-
 </header>
