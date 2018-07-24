@@ -17,21 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam
 
     <div class="uk-container">
         <div class="uk-child-width-1-2@s" uk-grid>
-            @each('partials.cards.project', $projects, 'project')
-        </div>
-    </div>
-
-    <div id="offcanvas-tags" uk-offcanvas="flip: true;">
-        <div class="uk-offcanvas-bar">
-
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <ul class="uk-nav uk-nav-default">
-                <li class="uk-nav-header">Tags</li>
-                <li><a href="">Laravel/PHP</a></li>
-                <li><a href="">Mapbox</a></li>
-                <li><a href="">Stripe</a></li>
-            </ul>
+            @each('projects.card', $projects, 'project')
         </div>
     </div>
 @endsection

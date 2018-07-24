@@ -1,11 +1,11 @@
 @extends('laramanager::layouts.sub.default')
 
 @section('title')
-    Project
+    {{ $project->title }}
 @endsection
 
 @section('description')
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aperiam cum cumque delectus est fugit in, incidunt minus natus nemo non optio quae reiciendis sapiente, tempore totam vero voluptatum.
+    {{ $project->desription }}
 @endsection
 
 @section('actions')
@@ -22,7 +22,6 @@
         <div class="uk-grid-divider" uk-grid>
             <div class="uk-width-2-3@s">
                 <div class="uk-child-width-1-2@s" uk-grid>
-                    @include('partials.cards.screencast')
                     @include('blog.list.card')
                 </div>
             </div>
