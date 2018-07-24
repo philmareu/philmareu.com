@@ -13,6 +13,6 @@
     @include('partials.headers.home')
 
     <div class="uk-container">
-        @each('partials.articles.list.basic', $posts, 'post')
+        @each('blog.list.basic', $posts, 'post')
     </div>
 @endsection
