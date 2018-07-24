@@ -1,4 +1,6 @@
 @import "../../../node_modules/uikit/src/less/uikit.theme.less";
+@import url("https://use.typekit.net/ijh8aqv.css");
+@import "../../../node_modules/highlight.js/styles/default.css";
 
 /*
 |--------------------------------------------------------------------------
@@ -10,8 +12,8 @@
 @color-1: white;
 @color-2: white;
 @color-3: white;
-@fonts-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@fonts-headers: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fonts-default: "brandon-grotesque", "Helvetica Neue", Helvetica;
+@fonts-headers: "brandon-grotesque", "Helvetica Neue", Helvetica;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +22,19 @@
 |
 */
 
+@global-font-family: @fonts-headers;
+@global-font-size: 20px;
+
 /*
 |--------------------------------------------------------------------------
 | UIkit Components
 |--------------------------------------------------------------------------
 |
 */
+
+@base-body-font-weight: 300;
+
+@base-code-font-family:                         "inconsolata", Consolas, monaco, monospace;
 
 /*
 |--------------------------------------------------------------------------
