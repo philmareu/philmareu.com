@@ -11,9 +11,4 @@ class Project extends Model
     {
         return $this->belongsTo(LaramanagerImage::class, 'laramanager_image_id');
     }
-
-    public function posts()
-    {
-        return $this->morphMany(Post::class, 'postable');
-    }
 }
