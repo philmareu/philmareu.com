@@ -16,6 +16,7 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('slug');
             $table->string('description');
             $table->unsignedInteger('laramanager_image_id');
             $table->string('website')->nullable();
