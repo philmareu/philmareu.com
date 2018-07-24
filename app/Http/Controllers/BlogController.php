@@ -8,10 +8,10 @@ use PhilMareu\Models\Post;
 
 class BlogController extends \PhilMareu\LaraManagerBlog\Http\Controllers\BlogController
 {
-    public function __construct(PostsRepository $postsRepository)
-    {
-        $postsRepository = new PostsRepository(new Post);
-
-        parent::__construct($postsRepository);
-    }
+//    public function __construct(PostsRepository $postsRepository)
+//    {
+//        $postsRepository = new PostsRepository(new Post);
+//
+//        parent::__construct($postsRepository);
+//    }
 }
