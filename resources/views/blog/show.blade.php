@@ -27,5 +27,13 @@
 @endsection
 
 @push('scripts-last')
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        hljs.initHighlightingOnLoad();
+
+        $(function() {
+            _.forEach(document.getElementsByTagName('table'), function(element) {
+                $(element).addClass('uk-table uk-table-striped uk-table-condensed')
+            });
+        })
+    </script>
 @endpush
