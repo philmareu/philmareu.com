@@ -1,5 +1,5 @@
 <div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-height-medium" uk-grid>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container uk-width-1-2@s">
             <img src="{{ url('images/original/' . $project->image->filename) }}" alt="" uk-cover>
             <canvas width="600" height="400"></canvas>
