@@ -7,6 +7,16 @@ use PhilMareu\Laramanager\Models\LaramanagerImage;
 
 class Project extends Model
 {
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'id';
+    }
+
     public function image()
     {
         return $this->belongsTo(LaramanagerImage::class, 'laramanager_image_id');
