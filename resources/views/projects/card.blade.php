@@ -9,7 +9,7 @@
                 <h3 class="uk-card-title">{{ $project->title }}</h3>
                 <p>{{ $project->description }}</p>
                 <div>
-                    <a href="{{ url('projects/' . $project->id) }}" class="uk-button uk-button-default uk-button-small">Details</a>
+                    <a href="{{ url('projects/' . $project->slug) }}" class="uk-button uk-button-default uk-button-small">Details</a>
                 </div>
             </div>
         </div>
