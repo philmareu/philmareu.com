@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
-            $table->string('description');
+            $table->text('description');
             $table->unsignedInteger('laramanager_image_id');
             $table->string('website')->nullable();
             $table->string('github')->nullable();
