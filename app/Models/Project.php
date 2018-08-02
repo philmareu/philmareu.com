@@ -3,10 +3,13 @@
 namespace PhilMareu\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use PhilMareu\Laramanager\Database\Objectable;
 use PhilMareu\Laramanager\Models\LaramanagerImage;
 
 class Project extends Model
 {
+    use Objectable;
+
     /**
      * Get the route key for the model.
      *
