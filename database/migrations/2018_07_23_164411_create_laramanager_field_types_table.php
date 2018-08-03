@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateLaramanagerFieldTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('laramanager_field_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
-            $table->text('description');
-            $table->text('tech_specs');
-            $table->unsignedInteger('laramanager_image_id');
-            $table->string('website')->nullable();
-            $table->string('github')->nullable();
+            $table->string('class');
+            $table->string('views');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('laramanager_field_types');
     }
 }

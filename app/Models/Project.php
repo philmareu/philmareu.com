@@ -34,4 +34,9 @@ class Project extends Model
     {
         return $this->belongsToMany(LaramanagerImage::class)->orderBy('ordinal', 'asc');
     }
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
 }
