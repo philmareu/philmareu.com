@@ -22,6 +22,7 @@ class CreateProjectsTable extends Migration
             $table->unsignedInteger('laramanager_image_id');
             $table->string('website')->nullable();
             $table->string('github')->nullable();
+            $table->unsignedTinyInteger('ordinal')->default(100);
             $table->timestamps();
         });
     }

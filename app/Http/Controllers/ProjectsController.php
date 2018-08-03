@@ -21,7 +21,7 @@ class ProjectsController extends Controller
      */
     public function index(Request $request)
     {
-        $projectsQuery = $this->project->with('image', 'tags');
+        $projectsQuery = $this->project->with('image', 'tags')->orderBy('ordinal');
 
         if($request->has('tag')) $projectsQuery->whereHas('tags', function ($query) use ($request) {
             $query->where('slug', $request->get('tag'));
