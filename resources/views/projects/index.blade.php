@@ -26,11 +26,9 @@ Projects
                         <a href="{{ url('projects/' . $project->slug) }}" class="uk-button uk-button-default uk-button-small">Details</a>
                     </div>
                     <div>
-                        <span class="uk-badge">Laravel</span>
-                        <span class="uk-badge">Vue</span>
-                        <span class="uk-badge">Stripe</span>
-                        <span class="uk-badge">Mapbox</span>
-                        <span class="uk-badge">Algolia</span>
+                        @foreach($project->tags as $tag)
+                            <span class="uk-badge">{{ $tag->title }}</span>
+                        @endforeach
                     </div>
                 </div>
             </div>
