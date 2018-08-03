@@ -1445,12 +1445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/philmareu/laramanager.git",
-                "reference": "4a42b2a372e8a3ea78e7e24e6d5ffd8570f388bc"
+                "reference": "2a8f15a9b97a773d3f2fbddc95cf42df8e1bc31f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philmareu/laramanager/zipball/4a42b2a372e8a3ea78e7e24e6d5ffd8570f388bc",
-                "reference": "4a42b2a372e8a3ea78e7e24e6d5ffd8570f388bc",
+                "url": "https://api.github.com/repos/philmareu/laramanager/zipball/2a8f15a9b97a773d3f2fbddc95cf42df8e1bc31f",
+                "reference": "2a8f15a9b97a773d3f2fbddc95cf42df8e1bc31f",
                 "shasum": ""
             },
             "require": {
@@ -1495,7 +1495,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-08-02T19:57:51+00:00"
+            "time": "2018-08-03T14:07:56+00:00"
         },
         {
             "name": "philmareu/laramanager-blog",
