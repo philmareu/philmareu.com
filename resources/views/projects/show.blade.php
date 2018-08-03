@@ -39,11 +39,15 @@
                 @each('laramanager::objects.render', $project->objects, 'object')
             </li>
             @if($project->tech_specs)
-                <li>{!! Parsedown::instance()->text($project->tech_specs) !!}</li>
+                <li>
+                    {!! Parsedown::instance()->text($project->tech_specs) !!}
+                </li>
             @endif
 
             @if($project->posts->count())
-                @each('blog.list.basic', $project->posts, 'post')
+                <li>
+                    @each('blog.list.basic', $project->posts, 'post')
+                </li>
             @endif
         </ul>
 
