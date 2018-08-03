@@ -19,10 +19,16 @@ class ProjectsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $projectsQuery = $this->project->with('image', 'tags');
+
+        if($request->has('tag')) $projectsQuery->whereHas('tags', function ($query) use ($request) {
+            $query->where('slug', $request->get('tag'));
+        });
+
         return view('projects.index')
-            ->withProjects($this->project->with('image', 'posts')->get());
+            ->withProjects($projectsQuery->get());
     }
 
     /**

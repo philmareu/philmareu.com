@@ -27,7 +27,7 @@ Projects
                     </div>
                     <div>
                         @foreach($project->tags as $tag)
-                            <span class="uk-badge">{{ $tag->title }}</span>
+                            <span class="uk-badge"><a href="{{ url('projects?tag=' . $tag->slug) }}" class="uk-link-reset">{{ $tag->title }}</a></span>
                         @endforeach
                     </div>
                 </div>
