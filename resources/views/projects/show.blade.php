@@ -25,20 +25,26 @@
 
         <ul class="uk-tab uk-flex-center" uk-switcher>
             <li class="uk-active"><a href="">Overview</a></li>
-            <li><a href="">Tech Specs</a></li>
-            <li><a href="">Posts</a></li>
+            @if($project->tech_specs)
+                <li><a href="">Tech Specs</a></li>
+            @endif
+
+            @if($project->posts->count())
+                <li><a href="">Posts</a></li>
+            @endif
         </ul>
 
         <ul class="uk-switcher">
             <li>
                 @each('laramanager::objects.render', $project->objects, 'object')
             </li>
-            <li>
-                
-            </li>
-            <li>
+            @if($project->tech_specs)
+                <li>{!! Parsedown::instance()->text($project->tech_specs) !!}</li>
+            @endif
+
+            @if($project->posts->count())
                 @each('blog.list.basic', $project->posts, 'post')
-            </li>
+            @endif
         </ul>
 
         {{--<div class="uk-grid-divider" uk-grid>--}}
@@ -52,3 +58,15 @@
         {{--</div>--}}
     </div>
 @endsection
+
+@push('scripts-last')
+    <script>
+        hljs.initHighlightingOnLoad();
+
+        $(function() {
+            _.forEach(document.getElementsByTagName('table'), function(element) {
+                $(element).addClass('uk-table uk-table-striped uk-table-condensed')
+            });
+        })
+    </script>
+@endpush
