@@ -179,10 +179,29 @@
                 <a href="https://www.behance.net/philmareud1d9" class="uk-icon-button" uk-icon="icon: behance"></a>
                 <a href="https://www.linkedin.com/in/philmareu" class="uk-icon-button" uk-icon="icon: linkedin"></a>
                 <h3>Active Projects</h3>
-                <ul class="uk-list">
-                    <li><a href="{{ url('projects/dg-tournaments') }}">DG Tournaments</a></li>
-                    <li><a href="{{ url('projects/laramanager') }}">Laramanager</a></li>
-                </ul>
+
+                <div class="uk-inline uk-dark uk-margin">
+                    <a href="{{ url('projects/dg-tournaments') }}">
+                        <img src="{{ url('images/original/levvmBHNIrlfik3LqXYcjYBOiVYLRcPlH3qXRjumiPY3WncsDgq0x0TXCw8Li7menjzmqIokHyAgQE2lpeEOzb1sylaQa3qEvvlO.png') }}" alt="">
+                        <div class="uk-overlay-primary uk-position-cover">
+                            <div class="uk-position-center">
+                                DG Tournaments
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="uk-inline uk-dark">
+                    <a href="{{ url('projects/laramanager') }}">
+                        <img src="{{ url('images/original/Qfy2DiL0EgXMSeUJ2xv3iiLJuqQDFdtHp1RoGyQ1tK1HvFF3sGZCRaRLujRtiHnRBwrYOlkG38NQwLYXzfdMz8oKYEhoyR1ItYLa.png') }}" alt="">
+                        <div class="uk-overlay-primary uk-position-cover">
+                            <div class="uk-position-center">
+                                Laramanager
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 <h3>Education</h3>
 
                 <p>2007, Bachelor degree in Mechanical Engineering from the University of Kansas</p>
