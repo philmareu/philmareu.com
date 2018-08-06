@@ -1,3 +1,3 @@
 <div class="uk-section-small uk-section-secondary uk-text-center">
-    <p>Phil Mareu</p>
+    <p>{{ date('Y') }} Phil Mareu - Coder, Traveler & Disc Thrower</p>
 </div>

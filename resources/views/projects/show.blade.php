@@ -11,11 +11,11 @@
 @section('actions')
     <div class="uk-text-center">
         @if($project->website)
-            <a href="{{ $project->website }}" class="uk-button uk-button-default">Website</a>
+            <a href="{{ $project->website }}" class="uk-button uk-button-default"><span uk-icon="world" class="uk-margin-small-right"></span>Website</a>
         @endif
 
         @if($project->github)
-            <a href="{{ $project->github }}" class="uk-button uk-button-default">Github</a>
+            <a href="{{ $project->github }}" class="uk-button uk-button-default"><span uk-icon="github" class="uk-margin-small-right"></span>Github</a>
         @endif
     </div>
 @endsection
