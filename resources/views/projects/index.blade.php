@@ -23,9 +23,10 @@ Projects
                     <h3>{{ $project->title }}</h3>
                     <p>{{ $project->description }}</p>
                     <div class="uk-margin">
-                        <a href="{{ url('projects/' . $project->slug) }}" class="uk-button uk-button-default uk-button-small">Details</a>
+                        <a href="{{ url('projects/' . $project->slug) }}" class="uk-active uk-button uk-button-default uk-button-small">Details</a>
                     </div>
                     <div>
+                        Tags:
                         @foreach($project->tags as $tag)
                             <span class="uk-badge"><a href="{{ url('projects?tag=' . $tag->slug) }}" class="uk-link-reset">{{ $tag->title }}</a></span>
                         @endforeach
