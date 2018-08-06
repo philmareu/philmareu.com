@@ -1,4 +1,4 @@
-<header class="bg-stripes">
+<header class="bg-stripes uk-light">
     @include('layout.navigation.primary')
 
     <section class="uk-section uk-text-center uk-margin-large-bottom">

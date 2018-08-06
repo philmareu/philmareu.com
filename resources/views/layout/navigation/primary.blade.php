@@ -2,7 +2,7 @@
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li class="uk-visible@s">
-                <a class="uk-navbar-item uk-logo uk-text-uppercase" href="{{ url('/') }}"><span uk-icon="icon: philmareu; ratio: .05;" class="uk-margin-small-right"></span>Phil Mareu</a>
+                <a class="uk-navbar-item uk-logo uk-text-uppercase" href="{{ url('/') }}"><span uk-icon="icon: philmareu; ratio: .05;" class="uk-margin-small-right" style="fill: white"></span>Phil Mareu</a>
             </li>
             <li class="uk-hidden@s">
                 <a class="uk-navbar-toggle" href="#offcanvas-navigation" uk-toggle>
