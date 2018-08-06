@@ -12,48 +12,48 @@
     <div class="uk-container">
         <div class="uk-grid-divider" uk-grid>
             <div class="uk-width-3-4@s">
-                <p class="uk-clearfix"><img src="images/original/photo-of-phil-mareu.jpg" alt="" class="uk-align-left uk-width-1-6@s">Hi, I’m Phil Mareu. I am a professional web designer and developer with almost 10 years of experience. I strive to build the best UI/UX for web applications and drive it with sensible coding practices and techniques. When I’m not building web things you can find me playing disc golf, hiking, or enjoying a tasty beverage while BBQing.</p>
+                <p class="uk-clearfix"><img src="images/original/photo-of-phil-mareu.jpg" alt="" class="uk-align-left uk-width-1-3 uk-width-1-6@s">Hi, I’m Phil Mareu. I am a professional web designer and developer with almost 10 years of experience. I strive to build the best UI/UX for web applications and drive it with sensible coding practices and techniques. When I’m not building web things you can find me playing disc golf, hiking, or enjoying a tasty beverage while BBQing.</p>
 
-                <p class="uk-clearfix"><img src="images/original/bailey-and-phil-wedding-photo.jpg" alt="" class="uk-align-right uk-width-1-6@s">In 2014, I married Bailey DeReus and we both legally changed our last name to Mareu. Mareu is a mash-up of my previous last name "Martinez" and her maiden name "DeReus". We both work remotely from our laptops and last year decided to hit the road full-time. Today, we both travel the U.S. while doing great things on the web. We sometimes blog at mareulife.com.</p>
+                <p class="uk-clearfix"><img src="images/original/bailey-and-phil-wedding-photo.jpg" alt="" class="uk-align-right uk-width-1-3 uk-width-1-6@s">In 2014, I married Bailey DeReus and we both legally changed our last name to Mareu. Mareu is a mash-up of my previous last name "Martinez" and her maiden name "DeReus". We both work remotely from our laptops and last year decided to hit the road full-time. Today, we both travel the U.S. while doing great things on the web. We sometimes blog at mareulife.com.</p>
 
                 <hr>
 
                 <h2 class="uk-text-center">Skills</h2>
-                <p class="uk-container uk-width-1-2 uk-text-center uk-margin-large-bottom">I specialize in Laravel and Vue application development and also design and code the frontend of almost all of my projects.</p>
+                <p class="uk-container uk-width-1-2@s uk-text-center uk-margin-large-bottom">I specialize in Laravel and Vue application development and also design and code the frontend of almost all of my projects.</p>
 
-                <div class="uk-container uk-width-3-4 uk-text-right uk-margin-large-bottom">
+                <div class="uk-container uk-width-3-4@s uk-text-right uk-margin-large-bottom">
                     <div class="uk-flex-middle" uk-grid>
-                        <div class="uk-width-1-4">
+                        <div class="uk-width-1-2 uk-width-1-4@s">
                             PHP/MySQL
                         </div>
-                        <div class="uk-width-3-4">
+                        <div class="uk-width-1-2 uk-width-3-4@s">
                             <progress id="js-progressbar" class="uk-progress" value="90" max="100"></progress>
                         </div>
                     </div>
 
                     <div class="uk-margin-remove-top uk-flex-middle" uk-grid>
-                        <div class="uk-width-1-4">
+                        <div class="uk-width-1-2 uk-width-1-4@s">
                             Laravel
                         </div>
-                        <div class="uk-width-3-4">
+                        <div class="uk-width-1-2 uk-width-3-4@s">
                             <progress id="js-progressbar" class="uk-progress" value="95" max="100"></progress>
                         </div>
                     </div>
 
                     <div class="uk-margin-remove-top uk-flex-middle" uk-grid>
-                        <div class="uk-width-1-4">
+                        <div class="uk-width-1-2 uk-width-1-4@s">
                             HTML/CSS
                         </div>
-                        <div class="uk-width-3-4">
+                        <div class="uk-width-1-2 uk-width-3-4@s">
                             <progress id="js-progressbar" class="uk-progress" value="95" max="100"></progress>
                         </div>
                     </div>
 
                     <div class="uk-margin-remove-top uk-flex-middle" uk-grid>
-                        <div class="uk-width-1-4">
+                        <div class="uk-width-1-2 uk-width-1-4@s">
                             Vue.js
                         </div>
-                        <div class="uk-width-3-4">
+                        <div class="uk-width-1-2 uk-width-3-4@s">
                             <progress id="js-progressbar" class="uk-progress" value="70" max="100"></progress>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
 
                 <h2 class="uk-text-center">Experience</h2>
 
-                <p class="uk-container uk-width-1-2 uk-text-center uk-margin-large-bottom">Over the last 10 years, I have worked on hundreds of projects and a large variety of tools and technologies.</p>
+                <p class="uk-container uk-width-1-2@s uk-text-center uk-margin-large-bottom">Over the last 10 years, I have worked on hundreds of projects and a large variety of tools and technologies.</p>
 
                 <div class="uk-child-width-1-3@s" uk-grid="masonry: true;">
                     <div>

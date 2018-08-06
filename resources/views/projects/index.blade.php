@@ -16,10 +16,10 @@ Projects
     <div class="uk-container">
         @foreach($projects as $project)
             <div class="uk-margin-large" uk-grid>
-                <div class="uk-width-1-3">
+                <div class="uk-width-1-3@s">
                     <img src="{{ url('images/original/' . $project->image->filename) }}" alt="">
                 </div>
-                <div class="uk-width-2-3">
+                <div class="uk-width-2-3@s">
                     <h3>{{ $project->title }}</h3>
                     <p>{{ $project->description }}</p>
                     <div class="uk-margin">
