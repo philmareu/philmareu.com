@@ -18,7 +18,7 @@ class HobbyResource extends Resource
 {
     protected static ?string $model = Hobby::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-beaker';
 
     public static function form(Form $form): Form
     {
@@ -76,7 +76,7 @@ class HobbyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\HobbyPostsRelationManager::class,
         ];
     }
 

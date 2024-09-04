@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Hobby extends Model
 {
     use HasFactory;
+
+    public function hobbyPosts()
+    {
+        return $this->hasMany(
+            HobbyPost::class,
+        );
+    }
 }

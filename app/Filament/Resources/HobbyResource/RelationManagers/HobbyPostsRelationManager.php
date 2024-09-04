@@ -1,26 +1,21 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\HobbyResource\RelationManagers;
 
-use App\Filament\Resources\HobbyPostResource\Pages;
-use App\Filament\Resources\HobbyPostResource\RelationManagers;
-use App\Models\HobbyPost;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
-class HobbyPostResource extends Resource
+class HobbyPostsRelationManager extends RelationManager
 {
-    protected static ?string $model = HobbyPost::class;
+    protected static string $relationship = 'hobbyPosts';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -37,7 +32,7 @@ class HobbyPostResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('summary')
                     ->required(),
-                Forms\Components\Textarea::make('content')
+                Forms\Components\MarkdownEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\DatePicker::make('date')
@@ -53,7 +48,7 @@ class HobbyPostResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
             ->columns([
@@ -87,26 +82,13 @@ class HobbyPostResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListHobbyPosts::route('/'),
-            'create' => Pages\CreateHobbyPost::route('/create'),
-            'edit' => Pages\EditHobbyPost::route('/{record}/edit'),
-        ];
     }
 }
