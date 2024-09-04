@@ -34,11 +34,12 @@
 </head>
 <body>
 
-<x-navigation-primary />
+<x-navigation />
 
 <div>
     {{ $slot }}
 </div>
 
+<x-footer />
 </body>
 </html>

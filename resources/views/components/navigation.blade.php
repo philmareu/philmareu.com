@@ -1,9 +1,6 @@
-<?php
+@php
 
-use function Livewire\Volt\state;
-
-state([
-    'items' => [
+    $items = [
         [
             'name' => 'Posts',
             'url' => url('posts'),
@@ -24,16 +21,13 @@ state([
             'url' => url('about'),
             'icon' => '',
         ]
-    ]
-])
-?>
+    ];
+@endphp
 
 <nav>
-    @volt
-        <div>
-            @foreach($items as $item)
-                {{ $item['name'] }}
-            @endforeach
-        </div>
-    @endvolt
+    <div>
+        @foreach($items as $item)
+            {{ $item['name'] }}
+        @endforeach
+    </div>
 </nav>
