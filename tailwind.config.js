@@ -6,7 +6,12 @@ export default {
         "./resources/**/*.vue",
     ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            content: ['"Comfortaa"', 'sans'],
+            header: ['"Josefin Slab"', 'serif'],
+        },
+    },
   },
   plugins: [],
 }
