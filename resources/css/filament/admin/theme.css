@@ -1,0 +1,139 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+.fi-body {
+    @apply bg-[#edeff4];
+}
+
+.fi-logo {
+    @apply text-slate-50;
+}
+
+.fi-input-wrp {
+    @apply bg-[#edeff4] ring-[#cdcfe3];
+}
+
+tr td div {
+    /*@apply !py-[2px]; I am throwing in the towel. It needs to be tall for descriptions and toggles. */
+}
+
+.fi-tabs {
+    @apply mx-0;
+}
+
+.fi-fo-tabs {
+    @apply bg-[#fcfcfc] shadow;
+}
+
+.fi-tabs-item-active {
+    @apply bg-slate-700 text-slate-50;
+}
+
+.fi-tabs-item-active span,
+.fi-tabs-item-active svg {
+    @apply text-slate-50;
+}
+
+.fi-ta-ctn {
+    @apply ring-[#cdcfe3] divide-[#cdcfe3] bg-[#fcfcfc] shadow;
+}
+
+.fi-ta-content {
+    @apply divide-[#cdcfe3];
+}
+
+.fi-sidebar {
+    @apply !bg-[#fcfcfc] border-r border-[#cdcfe3];
+}
+
+/*.fi-sidebar-header {*/
+/*    @apply bg-transparent ring-0 ring-transparent !shadow-none;*/
+/*}*/
+
+/*a.fi-sidebar-item-button {*/
+/*    @apply hover:bg-slate-700;*/
+/*}*/
+
+/*.fi-sidebar-item-active .fi-sidebar-item-button {*/
+/*    @apply bg-slate-700;*/
+/*}*/
+
+.fi-sidebar-item-label {
+    @apply text-slate-500;
+}
+
+.fi-sidebar-item-active a {
+    @apply bg-slate-700 rounded-lg shadow ring-1 ring-[#e0e0ef];
+}
+
+.fi-sidebar-item-active .fi-sidebar-item-label,
+.fi-sidebar-item-active .fi-sidebar-item-icon {
+    @apply text-slate-100;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item-button {
+    @apply hover:bg-slate-500;
+}
+
+/*.fi-sidebar-item-label,*/
+/*.fi-sidebar-item-icon {*/
+/*    @apply text-slate-400;*/
+/*}*/
+
+/*.fi-section-content-ctn,*/
+/*.fi-ta-ctn {*/
+/*    @apply rounded-sm ring-slate-300 ring-1;*/
+/*}*/
+
+.fi-sidebar-header {
+    @apply bg-transparent text-slate-900 text-center;
+}
+
+.fi-logo {
+    @apply text-slate-900 text-center;
+}
+
+.fi-topbar nav {
+    @apply bg-slate-100;
+}
+
+/*.fi-layout {*/
+/*    !*@apply rounded-xl border;*!*/
+/*}*/
+
+/*.fi-ta-ctn {*/
+/*    !*@apply rounded-none;*!*/
+/*}*/
+
+/*.fi-ta-content {*/
+/*    !*@apply bg-red-50;*!*/
+/*}*/
+
+/*.fi-ta-table {*/
+/*    !*@apply border-2 border-black;*!*/
+/*}*/
+
+/*.fi-ta-table thead {*/
+/*    !*@apply border-b-4;*!*/
+/*}*/
+
+/*.fi-ta-cell .fi-ta-text {*/
+/*    @apply py-1;*/
+/*}*/
+
+/*.fi-ta-cell div {*/
+/*    @apply p-1;*/
+/*}*/
+
+/*.fi-ta-header-cell {*/
+/*    !*@apply p-0;*!*/
+/*}*/
+
+/*.fi-ta-table thead tr th div {*/
+/*    !*@apply p-0;*!*/
+/*}*/
+
+/*.fi-ta-table tbody tr td div {*/
+/*    !*@apply p-0;*!*/
+/*}*/
