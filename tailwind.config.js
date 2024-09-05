@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
         fontFamily: {
-            content: ['"Comfortaa"', 'sans'],
-            header: ['"Josefin Slab"', 'serif'],
+            sans: ['"Comfortaa"', 'sans'],
+            serif: ['"Josefin Slab"', 'serif'],
         },
     },
   },

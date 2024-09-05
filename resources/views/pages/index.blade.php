@@ -1,11 +1,8 @@
+@php $user = auth()->user() @endphp
+
 <x-layout>
-    <section>About</section>
-
-    <section>Recent Posts</section>
-    <livewire:recent-posts />
-
-    <section>Active Projects</section>
-    <livewire:active-projects />
-
-    <section>Hobbies</section>
+    <x-home-header :user="$user" />
+    <div class="w-1/2 mx-auto">
+        <livewire:recent-posts />
+    </div>
 </x-layout>

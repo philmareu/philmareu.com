@@ -32,16 +32,19 @@ class PostResource extends Resource
                             ->schema([
                                 Forms\Components\DatePicker::make('published_at')
                                     ->required(),
-                                Forms\Components\TextInput::make('name')
-                                    ->required()
-                                    ->live(onBlur: true)
-                                    ->afterStateUpdated(
-                                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
-                                    ),
-                                Forms\Components\TextInput::make('slug')
-                                    ->required(),
                             ])
                             ->columns(3),
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(
+                                fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
+                            ),
+                        Forms\Components\TextInput::make('slug')
+                            ->required(),
+                        Forms\Components\Textarea::make('summary')
+                            ->required()
+                            ->rows(4),
                         Forms\Components\MarkdownEditor::make('content')
                             ->required()
                             ->columnSpanFull(),

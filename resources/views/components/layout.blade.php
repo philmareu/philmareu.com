@@ -32,7 +32,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="font-sans text-slate-600 bg-slate-100">
 
 <x-navigation />
 
@@ -40,6 +40,6 @@
     {{ $slot }}
 </div>
 
-<x-footer />
+<x-footer :user="auth()->user()" />
 </body>
 </html>
