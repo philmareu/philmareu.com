@@ -24,24 +24,34 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(
-                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
-                    ),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\TextInput::make('summary')
-                    ->required(),
-                Forms\Components\FileUpload::make('featured_image')
-                    ->image()
-                    ->required(),
-                Forms\Components\Toggle::make('active')
-                    ->required(),
-                Forms\Components\TextInput::make('year')
-                    ->required()
-                    ->numeric(),
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\Toggle::make('active')
+                            ->required(),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('name')
+                                    ->required()
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(
+                                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
+                                    ),
+                                Forms\Components\TextInput::make('slug')
+                                    ->required(),
+                                Forms\Components\TextInput::make('year')
+                                    ->required(),
+                            ])
+                            ->columns(3),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\Textarea::make('summary')
+                                    ->rows(4)
+                                    ->required(),
+                                Forms\Components\FileUpload::make('featured_image')
+                                    ->image()
+                                    ->required(),
+                            ])
+                    ])
             ]);
     }
 
@@ -51,15 +61,12 @@ class ProjectResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('summary')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('featured_image'),
                 Tables\Columns\IconColumn::make('active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('year')
-                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -19,45 +19,50 @@ class HobbyPostsRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('hobby_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(
-                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
-                    ),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\TextInput::make('summary')
-                    ->required(),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Toggle::make('ready')
+                            ->required(),
+                    ]),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\DatePicker::make('date')
+                            ->required(),
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(
+                                fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
+                            ),
+                        Forms\Components\TextInput::make('slug')
+                            ->required(),
+                    ])
+                    ->columns(3),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Textarea::make('summary')
+                            ->rows(4)
+                            ->required(),
+                        Forms\Components\FileUpload::make('featured_image')
+                            ->image()
+                            ->required(),
+                    ])
+                    ->columns(2),
                 Forms\Components\MarkdownEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\DatePicker::make('date')
+                Forms\Components\FileUpload::make('images')
+                    ->multiple()
                     ->required(),
-                Forms\Components\Toggle::make('ready')
-                    ->required(),
-                Forms\Components\FileUpload::make('featured_image')
-                    ->image()
-                    ->required(),
-                Forms\Components\Textarea::make('images')
-                    ->required()
-                    ->columnSpanFull(),
-            ]);
+            ])
+            ->columns(1);
     }
 
     public function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('hobby_id')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('summary')
                     ->searchable(),

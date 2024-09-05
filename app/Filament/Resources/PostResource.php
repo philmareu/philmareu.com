@@ -24,21 +24,28 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(
-                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
-                    ),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\DatePicker::make('published_at')
-                    ->required(),
-                Forms\Components\Toggle::make('ready')
-                    ->required(),
-                Forms\Components\MarkdownEditor::make('content')
-                    ->required()
-                    ->columnSpanFull(),
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\Toggle::make('ready')
+                            ->required(),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\DatePicker::make('published_at')
+                                    ->required(),
+                                Forms\Components\TextInput::make('name')
+                                    ->required()
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(
+                                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
+                                    ),
+                                Forms\Components\TextInput::make('slug')
+                                    ->required(),
+                            ])
+                            ->columns(3),
+                        Forms\Components\MarkdownEditor::make('content')
+                            ->required()
+                            ->columnSpanFull(),
+                    ]),
             ]);
     }
 

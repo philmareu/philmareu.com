@@ -24,19 +24,27 @@ class HobbyResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->live(onBlur: true)
-                    ->afterStateUpdated(
-                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
-                    ),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\TextInput::make('summary')
-                    ->required(),
-                Forms\Components\FileUpload::make('featured_image')
-                    ->image()
-                    ->required(),
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('name')
+                                    ->required()
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(
+                                        fn (Forms\Set $set, $state) => $set('slug', Str::slug($state))
+                                    ),
+                                Forms\Components\TextInput::make('slug')
+                                    ->required(),
+                            ])
+                            ->columns(4),
+                        Forms\Components\Textarea::make('summary')
+                            ->rows(4)
+                            ->required(),
+                        Forms\Components\FileUpload::make('featured_image')
+                            ->image()
+                            ->required(),
+                    ]),
             ]);
     }
 

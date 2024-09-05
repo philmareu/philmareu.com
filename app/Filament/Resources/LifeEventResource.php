@@ -17,22 +17,33 @@ class LifeEventResource extends Resource
 {
     protected static ?string $model = LifeEvent::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar-date-range';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('year')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
-                Forms\Components\TextInput::make('summary')
-                    ->required(),
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('name')
+                                    ->required(),
+                                Forms\Components\TextInput::make('year')
+                                    ->required()
+                                    ->numeric(),
+                            ])
+                            ->columns(4),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\Textarea::make('summary')
+                                    ->rows(4)
+                                    ->required(),
+                                Forms\Components\FileUpload::make('image')
+                                    ->image()
+                                    ->required(),
+                            ])
+                    ]),
             ]);
     }
 
@@ -41,13 +52,12 @@ class LifeEventResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('year')
-                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('summary')
-                    ->searchable(),
+                    ->words(8),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

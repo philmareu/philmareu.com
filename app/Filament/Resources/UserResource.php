@@ -23,31 +23,52 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required(),
-                Forms\Components\DateTimePicker::make('email_verified_at'),
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->required(),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
-                Forms\Components\TextInput::make('logo')
-                    ->required(),
-                Forms\Components\TextInput::make('hero')
-                    ->required(),
-                Forms\Components\Textarea::make('summary')
-                    ->required()
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('about')
-                    ->required()
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('links')
-                    ->required()
-                    ->columnSpanFull(),
+                Forms\Components\Section::make('Profile')
+                    ->schema([
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('name')
+                                    ->required(),
+                                Forms\Components\TextInput::make('email')
+                                    ->email()
+                                    ->required(),
+                                Forms\Components\TextInput::make('password')
+                                    ->nullable()
+                                    ->dehydrated(fn ($state) => filled($state))
+                                    ->password(),
+                            ])
+                            ->columns(3),
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\FileUpload::make('image')
+                                    ->image()
+                                    ->required(),
+                                Forms\Components\FileUpload::make('logo')
+                                    ->required(),
+                            ])
+                            ->columns(2)
+                    ]),
+                Forms\Components\Section::make('Content')
+                    ->schema([
+                        Forms\Components\TextInput::make('hero')
+                            ->required(),
+                        Forms\Components\Textarea::make('summary')
+                            ->required()
+                            ->columnSpanFull(),
+                        Forms\Components\MarkdownEditor::make('about')
+                            ->required()
+                            ->columnSpanFull(),
+                        Forms\Components\Repeater::make('links')
+                            ->schema([
+                                Forms\Components\TextInput::make('name')
+                                    ->required(),
+                                Forms\Components\TextInput::make('url')
+                                    ->url(),
+                            ])
+                            ->columns(2)
+                            ->required()
+                            ->columnSpanFull(),
+                    ]),
             ]);
     }
 
