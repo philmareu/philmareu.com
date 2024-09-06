@@ -25,6 +25,7 @@ class UserResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Profile')
                     ->schema([
+                        Forms\Components\Toggle::make('primary'),
                         Forms\Components\Group::make()
                             ->schema([
                                 Forms\Components\TextInput::make('name')

@@ -45,6 +45,7 @@ class User extends Authenticatable implements FilamentUser
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'links' => 'array',
+            'primary' => 'boolean',
         ];
     }
 

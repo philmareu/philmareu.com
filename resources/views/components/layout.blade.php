@@ -40,6 +40,6 @@
     {{ $slot }}
 </div>
 
-<x-footer :user="auth()->user()" />
+<x-footer :user="\App\Services\PrimaryUser::retrieve()" />
 </body>
 </html>
