@@ -5,6 +5,6 @@
 
     <section class="w-1/2 mx-auto mt-16">
         <div class="prose max-w-none">{!! \Illuminate\Support\Str::markdown($user->about) !!}</div>
-        <div>Timeline</div>
+        <livewire:timeline />
     </section>
 </x-layout>
