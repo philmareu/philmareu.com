@@ -40,6 +40,10 @@ class ProjectResource extends Resource
                                     ->required(),
                                 Forms\Components\TextInput::make('year')
                                     ->required(),
+                                Forms\Components\TextInput::make('url_name')
+                                    ->nullable(),
+                                Forms\Components\TextInput::make('url')
+                                    ->nullable(),
                             ])
                             ->columns(3),
                         Forms\Components\Group::make()
@@ -50,6 +54,10 @@ class ProjectResource extends Resource
                                 Forms\Components\FileUpload::make('featured_image')
                                     ->image()
                                     ->required(),
+                                Forms\Components\Select::make('technologies')
+                                    ->multiple()
+                                    ->preload()
+                                    ->relationship('technologies', 'name')
                             ])
                     ])
             ]);
