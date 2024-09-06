@@ -11,5 +11,6 @@ class HobbyPost extends Model
 
     protected $casts = [
         'images' => 'array',
+        'date' => 'date',
     ];
 }
