@@ -49,6 +49,10 @@ class UserResource extends Resource
                             ])
                             ->columns(2)
                     ]),
+                Forms\Components\Section::make('SEO')
+                    ->schema([
+                        Forms\Components\KeyValue::make('meta')
+                    ]),
                 Forms\Components\Section::make('Content')
                     ->schema([
                         Forms\Components\TextInput::make('hero')

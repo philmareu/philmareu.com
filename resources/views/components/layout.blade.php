@@ -1,3 +1,5 @@
+<?php $user = \App\Services\PrimaryUser::retrieve() ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,21 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Phil Mareu">
-    <meta name="description" content="Phil Mareu is a Laravel web developer located in the USA.">
+    <meta name="title" content="{{ $user->meta['title'] ?? '' }}">
+    <meta name="description" content="{{ $user->meta['description'] ?? '' }}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://philmareu.com/">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="Phil Mareu is a Laravel web developer located in the USA.">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:title" content="{{ $user->meta['og:title'] ?? '' }}">
+    <meta property="og:description" content="{{ $user->meta['og:description'] ?? '' }}">
     <meta property="og:image" content="{{ asset('open-graph-image.jpeg') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://philmareu.com/">
-    <meta property="twitter:title" content="Phil Mareu">
-    <meta property="twitter:description" content="Phil Mareu is a Laravel web developer located in the USA.">
+    <meta property="twitter:url" content="{{ url('/') }}">
+    <meta property="twitter:title" content="{{ $user->meta['twitter:title'] ?? '' }}">
+    <meta property="twitter:description" content="{{ $user->meta['twitter:description'] ?? '' }}">
     <meta property="twitter:image" content="{{ asset('twitter-image.jpeg') }}">
 
     <!-- Favicon -->
@@ -40,6 +42,6 @@
     {{ $slot }}
 </div>
 
-<x-footer :user="\App\Services\PrimaryUser::retrieve()" />
+<x-footer :user="$user" />
 </body>
 </html>

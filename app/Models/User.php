@@ -46,6 +46,7 @@ class User extends Authenticatable implements FilamentUser
             'password' => 'hashed',
             'links' => 'array',
             'primary' => 'boolean',
+            'meta' => 'array',
         ];
     }
 
