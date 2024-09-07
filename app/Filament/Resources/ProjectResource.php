@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\ProjectTypes;
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
@@ -44,6 +45,8 @@ class ProjectResource extends Resource
                                     ->nullable(),
                                 Forms\Components\TextInput::make('url')
                                     ->nullable(),
+                                Forms\Components\Select::make('type')
+                                    ->options(ProjectTypes::class),
                             ])
                             ->columns(3),
                         Forms\Components\Group::make()
@@ -70,13 +73,12 @@ class ProjectResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('summary')
-                    ->searchable(),
                 Tables\Columns\ImageColumn::make('featured_image'),
                 Tables\Columns\IconColumn::make('active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('year')
                     ->sortable(),
+                Tables\Columns\TextColumn::make('type'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
