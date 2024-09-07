@@ -14,11 +14,6 @@
             'icon' => '',
         ],
         [
-            'name' => 'Hobbies',
-            'url' => url('hobbies'),
-            'icon' => '',
-        ],
-        [
             'name' => 'About',
             'url' => url('about'),
             'icon' => '',
