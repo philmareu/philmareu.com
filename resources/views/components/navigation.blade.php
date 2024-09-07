@@ -3,11 +3,11 @@
     $user = \App\Services\PrimaryUser::retrieve();
 
     $items = [
-        [
-            'name' => 'Posts',
-            'url' => url('posts'),
-            'icon' => '',
-        ],
+//        [
+//            'name' => 'Posts',
+//            'url' => url('posts'),
+//            'icon' => '',
+//        ],
         [
             'name' => 'Projects',
             'url' => url('projects'),
