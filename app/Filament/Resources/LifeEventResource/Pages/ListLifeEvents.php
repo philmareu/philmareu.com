@@ -13,6 +13,9 @@ class ListLifeEvents extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            Actions\Action::make('view')
+                ->icon('heroicon-o-link')
+                ->url(url('about')),
             Actions\CreateAction::make(),
         ];
     }

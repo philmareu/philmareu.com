@@ -33,4 +33,10 @@
     @foreach($items as $item)
         <a href="{{ $item['url'] }}" class="px-4">{{ $item['name'] }}</a>
     @endforeach
+    @auth
+        <a href="{{ url('admin') }}" class="flex space-x-2 px-4 border-l-4">
+            <x-heroicon-o-adjustments-horizontal class="w-6" />
+            <span>Admin</span>
+        </a>
+    @endauth
 </nav>

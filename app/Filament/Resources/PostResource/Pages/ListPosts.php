@@ -13,6 +13,9 @@ class ListPosts extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            Actions\Action::make('view')
+                ->icon('heroicon-o-link')
+                ->url(url('posts')),
             Actions\CreateAction::make(),
         ];
     }
