@@ -14,7 +14,7 @@ state([
     @foreach($events as $event)
         <div class="md:flex sm:space-x-8 mt-8">
             <div class="basis-1/6">
-                <img src="{{ $event->image }}" alt="Image relation to {{ $event->name }} event" class="rounded-full aspect-square overflow-hidden w-1/2 mx-auto md:w-full md:mx-0">
+                <img src="{{ asset('storage/' . $event->image) }}" alt="Image relation to {{ $event->name }} event" class="rounded-full aspect-square overflow-hidden w-1/2 mx-auto md:w-full md:mx-0">
             </div>
             <div class="mt-4 md:mt-0 basis-5/6">
                 <div class="font-serif text-2xl">{{ $event->year }}</div>
