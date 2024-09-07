@@ -1,6 +1,6 @@
 <header class="py-16 bg-slate-50">
     <div class="text-center">
-        <img src="{{ $user->image }}" alt="Image of Phil Mareu" class="rounded-full ring-slate-200 ring-4 mx-auto">
+        <img src="{{ asset($user->image) }}" alt="Image of Phil Mareu" class="rounded-full ring-slate-200 ring-4 mx-auto">
         <div class="font-serif mt-8 md:w-4/5 md:mx-auto">
             <div class="uppercase text-3xl md:text-6xl bg-gradient-to-r from-slate-500 via-slate-400 to-slate-900 text-transparent bg-clip-text inline-block">Hi, I'm {{ $user->name }}</div>
             <br>
