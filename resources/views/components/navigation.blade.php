@@ -28,7 +28,7 @@
             <rect x="50" y="50" width="174" height="198" fill="none"/>
             <path d="M0,0V499H50V298H274V50H448V499h50V0H0ZM224,248H50V50H224Z" class="fill-amber-950"/>
         </svg>
-        <div class="ml-4">{{ $user->name }}</div>
+        <div class="hidden md:block ml-4">{{ $user->name }}</div>
     </a>
     @foreach($items as $item)
         <a href="{{ $item['url'] }}" class="px-4">{{ $item['name'] }}</a>

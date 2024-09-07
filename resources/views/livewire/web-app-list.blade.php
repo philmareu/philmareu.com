@@ -14,7 +14,7 @@ state([
 
 <div>
     @foreach($projects as $project)
-        <div class="flex space-x-4 mt-8 first:mt-0 border">
+        <div class="md:flex space-x-4 mt-8 first:mt-0 border">
             <div class="basis-1/3">
                 <img src="{{ $project->featured_image }}"
                      alt="Featured image for the {{ $project->name }} project">

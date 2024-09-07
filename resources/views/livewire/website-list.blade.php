@@ -13,7 +13,7 @@ state([
 ?>
 
 <div>
-    <div class="grid grid-cols-2 gap-4 mt-8 first:mt-0">
+    <div class="grid md:grid-cols-2 gap-4 mt-8 first:mt-0">
         @foreach($projects as $project)
             <div class="p-4 border">
                 <div class="font-serif font-bold text-2xl">{{ $project->year }} - {{ $project->name }}</div>
