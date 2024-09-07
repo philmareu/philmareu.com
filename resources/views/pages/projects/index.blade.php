@@ -4,7 +4,7 @@ use App\Models\Project;
 use function Livewire\Volt\{state};
 
 state([
-    'projects' => fn() => Project::limit(5)
+    'projects' => fn() => Project::orderBy('year', 'desc')
         ->get()
 ]);
 
